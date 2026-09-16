@@ -1,0 +1,87 @@
+.documentation {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 850px);
+  gap: 50px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  align-items: start;
+}
+.documentation aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 12px;
+  position: sticky;
+  top: 30px;
+}
+.documentation article {
+  min-width: 0;
+  line-height: 1.85;
+}
+.documentation h1 {
+  font-size: 46px;
+}
+.documentation h2 {
+  font:
+    30px Georgia,
+    serif;
+  margin-top: 38px;
+}
+.documentation h3 {
+  font-size: 19px;
+}
+.documentation pre {
+  overflow: auto;
+  padding: 20px;
+  background: #e8ebe2;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.documentation code {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.documentation pre code {
+  white-space: pre;
+}
+.documentation table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  font-size: 13px;
+}
+.documentation td,
+.documentation th {
+  padding: 12px;
+  border: 1px solid #ccd3c8;
+  text-align: left;
+  min-width: 110px;
+}
+.documentation a {
+  overflow-wrap: anywhere;
+}
+.edit-link {
+  border-top: 1px solid #ccd3c8;
+  padding-top: 22px;
+  font-size: 12px;
+}
+@media (max-width: 800px) {
+  .documentation {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .documentation aside {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .documentation h1 {
+    font-size: 36px;
+  }
+  header nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+}

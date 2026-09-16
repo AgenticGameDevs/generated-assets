@@ -6,3 +6,5 @@ node_modules/
 fly-data*/
 private/
 dist/
+test-results/
+playwright-report/

@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Maintain the library — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="workflows.html">Generation workflows</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article><h1>Maintain a useful asset library</h1>
+<p>Optimize for a developer finding the right asset, understanding its limits, importing it successfully, and preserving credit. Favor clear small contributions over a catalog full of poorly described uploads. The library's scope is media, rigs, animations and their generation/import workflows. Weather and world generation systems remain outside it.</p>
+<h2>Architecture</h2>
+<ul>
+<li><code>metadata/</code> holds source descriptors. <code>assets/</code> holds redistributable media, with real files rather than Git LFS pointers. <code>thumbnails/</code> shows those actual files.</li>
+<li><code>scripts/catalog.mjs</code> validates descriptors, inspects bytes, derives technical tags and writes <code>catalog.json</code> and the source JSON Schema.</li>
+<li><code>lib/catalog.mjs</code> supplies shared filtering/attribution. <code>packs.json</code> references existing assets without duplicating files.</li>
+<li><code>skills/use-generated-assets/scripts/transfer.mjs</code> defines bounded transfers and lockfile checks shared by CLI, gallery and MCP.</li>
+<li><code>gallery.js</code>, <code>lib/selection-ui.mjs</code> and <code>viewer.js</code> implement discovery, selection and isolated 3D previews. Static previews render on demand; animation pauses when hidden.</li>
+<li>Documentation is Markdown rendered with raw HTML disabled. <code>scripts/build-site.mjs</code> copies an explicit public allowlist into <code>dist/</code>.</li>
+<li>MCP is local and read-only. GitHub Pages serves static files; neither is a submission backend.</li>
+</ul>
+<h2>Review an asset PR</h2>
+<ol>
+<li>Read the descriptor and rights statement before running anything. Establish creator, license, provenance and reference rights. The submitting person's assertion is evidence to review, not a substitute for resolving a visible conflict.</li>
+<li>Compare the thumbnail with the submitted bytes. Inspect an animated character in motion, a texture repeated, and sound from start to finish. Look for accidental logos, copied characters, bad seams, clipping, misleading scale or inconsistent rig names.</li>
+<li>Confirm that tags and description make the file findable without overstating support. Say what the file contains, likely uses, style, rig/clip requirements, and what is absent.</li>
+<li>Inspect CI: metadata/checksums, unit tests, decoded glTF validation, generated-doc link checks and browser flows. CI executes contributed code only in a read-only PR context; never switch to <code>pull_request_target</code> to make an untrusted workflow convenient.</li>
+<li>Review code and generator changes as code. Do not automatically run contributed scripts on a maintainer machine to inspect a binary.</li>
+<li>Merge after rights and quality review. Credit contributors; describe compatibility changes in <code>CHANGELOG.md</code>.</li>
+</ol>
+<h2>Local checks</h2>
+<pre><code class="language-sh">npm ci
+npm run build
+npm test
+npm run verify
+npm run validate:gltf
+npm run check:links
+npx playwright install chromium
+npm run test:browser
+npm run format:check
+</code></pre>
+<p><code>validate:gltf</code> decodes Meshopt and converts unsupported compact texture/geometry extensions in memory before passing each GLB to the Khronos validator. Errors fail; warnings remain diagnostics. It does not establish legal rights or artistic quality. The browser suite tests real pages, animated previews, pack contents/credits/checksums and narrow viewports. Native-engine checks in <code>examples/import-checks</code> are optional local checks; report exactly which file/version was tested.</p>
+<h2>Releases and deployment</h2>
+<p>The GitHub Actions workflow validates pull requests and publishes an inspectable site artifact. A separate Windows job verifies the catalog and tooling tests. Only trusted pushes to <code>main</code> can deploy to Pages after both jobs pass. Public deployment includes <code>catalog-info.json</code> with the commit used by browser lockfiles. Keep the generated catalog, schemas and documentation committed; <code>dist/</code> stays ignored.</p>
+<p>For a release, update package version/lock and changelog, run required checks, review changed source/binary files, then publish through the normal maintainer merge process. Confirm the Pages run succeeded and verify one live catalog entry, download hash, pack and guide. Tag only the tested release commit. A rollback should revert the faulty change through the same pipeline so the catalog and media remain consistent.</p>
+<p>Use the branch controls described in <a href="governance.html">governance</a>. <code>CODEOWNERS</code> alone is not enforcement. With one maintainer, requiring another person's approval would prevent normal self-authored changes; introduce that requirement when there is a second trusted maintainer. Required status checks can still protect every PR.</p>
+<h2>Dependency and format maintenance</h2>
+<p>Dependencies are locked; use <code>npm ci</code> in CI and pin vendored browser libraries with their license. Review dependency updates before merging. Dependabot proposes npm and GitHub Actions updates weekly. Do not auto-merge runtime/importer changes without the relevant tests. Re-run conversion and browser checks when updating Three.js, glTF Transform, decoders or image libraries.</p>
+<p>Discuss large binaries, additional formats or licenses in an issue first. Budget the download and review cost; prefer focused PRs and useful mobile alternatives. Avoid introducing paid generation or API credentials into validation. Never include production databases, email hashes, private reference files or unreviewed personal images.</p>
+<h2>Rights and security reports</h2>
+<p>Asset problems use the issue form. A credible rights dispute may require temporarily removing an item from the catalog while preserving a non-private explanation and prior provenance. Security issues should follow <a href="SECURITY.md">SECURITY.md</a>. Record confirmed impact, affected versions and remediation; do not promise response times a volunteer team cannot meet.</p>
+<p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/docs/MAINTAINING.md">View or improve this document on GitHub ↗</a></p></article></main></body></html>

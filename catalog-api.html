@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Catalog API — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="workflows.html">Generation workflows</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article><h1>Catalog and integration contract</h1>
+<p>The gallery, CLI and MCP share one generated catalog. No API key, tracking account or hosted write service is required. For ordinary browsing start with <a href="index.html">the gallery</a>; for engine use read <a href="guide.html">the import guide</a>.</p>
+<h2>Public resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>catalog.json</code></td>
+<td>Array of asset records; retained as an array for existing consumers</td>
+</tr>
+<tr>
+<td><code>metadata/&lt;id&gt;.json</code></td>
+<td>Authoritative editable descriptor for an individual asset</td>
+</tr>
+<tr>
+<td><code>schemas/asset.schema.json</code></td>
+<td>JSON Schema for source descriptors</td>
+</tr>
+<tr>
+<td><code>packs.json</code></td>
+<td>Curated packs with stable IDs, descriptions, asset IDs and limitations</td>
+</tr>
+<tr>
+<td><code>catalog-info.json</code></td>
+<td>Deployment version, schema version and exact Git revision; generated in the site build</td>
+</tr>
+<tr>
+<td><code>assets/&lt;collection&gt;/&lt;folder&gt;/&lt;slug&gt;.&lt;ext&gt;</code></td>
+<td>Original downloadable bytes</td>
+</tr>
+</tbody>
+</table>
+<p>All public resources are relative to <code>https://jonathanwmaddison.github.io/generated-assets/</code>. The Pages catalog follows the latest successfully deployed <code>main</code>. GitHub's raw URLs at a full commit SHA provide a versioned source. JSON consumers should tolerate new optional fields. There is no write API; contributions use reviewed pull requests.</p>
+<h2>Stable identifiers and source descriptors</h2>
+<p>An ID such as <code>fjordfall/models/traveller</code> contains collection, kind folder and slug. It is independent of display name, tags and description. Folder names are <code>models</code>, <code>rigs</code>, <code>animations</code>, <code>tex</code>, <code>ui</code> and <code>sfx</code>. <code>kind</code> values in JSON are <code>model</code>, <code>rig</code>, <code>animation</code>, <code>texture</code>, <code>artwork</code> and <code>sound</code>.</p>
+<p>Required context includes a useful description, tags, creator, license, attribution, file path, source method/generator/description, and usage notes. Record reference-image rights when applicable. Use <code>usage.rigTarget</code> for a rig/animation's target contract; a catalog rig ID supports related-asset discovery. <code>usage.rootMotion</code>, scale and seamlessness should express uncertainty rather than guesses.</p>
+<p>Generated fields include byte size, SHA-256, license/download/gallery URLs and technical details. Source fields remain editable only in <code>metadata/</code>; regenerate the catalog after editing. Do not edit byte counts or claim a different hash to bypass validation.</p>
+<h2>Technical fields and their limits</h2>
+<ul>
+<li>GLB: triangle/vertex/mesh/material counts, skins, joint names/hierarchy, clip names/durations/channel counts, and required glTF extensions. Counts describe stored geometry; they are not measured frame cost or instance-expanded world complexity.</li>
+<li>Raster: format, width, height and alpha-channel presence. Alpha presence does not prove the file visibly uses transparency.</li>
+<li>WAV: sample rate, channel count and duration. MP3/Ogg currently receive header checks; absent audio fields mean unknown, not zero.</li>
+<li>Derived tags include <code>rigged</code>, <code>animated</code>, <code>&lt;n&gt;-joints</code>, <code>&lt;n&gt;-clips</code>, action hints from clip names, and verified tiling. <code>rigged</code> specifically means a skinned GLB; a mesh-free rig uses its joint-count and skeleton tags instead.</li>
+</ul>
+<p>Action tags inferred from clip names aid search, but cannot establish animation quality. A standalone rig's skeleton context is retained in GLB extras, since a file without a mesh has no skin. Maintainers inspect that context alongside the actual hierarchy.</p>
+<h2>Lockfiles</h2>
+<p><code>assets.lock.json</code> is schema version 1, identifies <code>generated-assets</code>, records a nullable full Git <code>revision</code>, and includes selected IDs, file paths, sizes, SHA-256 hashes, licenses, credits and download URLs. The helper validates paths and allows download URLs only from the stated library/revision. Unknown hosts, traversal paths, repeated IDs and oversized selections are rejected before writing.</p>
+<p>Published browser packs pin the deployed Git revision. A locally created lock without <code>--ref</code> follows Pages URLs, but still verifies exact hashes: if an asset changes, restoration fails rather than silently changing your build. Keep the ZIP or use a pinned commit for long-term reproducibility. A hash verifies agreement with a manifest, not the trustworthiness of whoever supplied that manifest.</p>
+<pre><code class="language-sh">node skills/use-generated-assets/scripts/assets.mjs lock \
+  fjordfall/models/traveller,fjordfall/animations/walk \
+  --out assets.lock.json --ref &lt;full-40-character-commit-sha&gt;
+</code></pre>
+<p>Per-file downloads use a collision-resistant ID-based filename and adjacent <code>.asset.json</code>. Pack restores retain the repository's <code>assets/</code> paths. Both preserve existing files; restore requires a new folder. Conversion writes a separate derivative and records its own checksum and changes without altering the source catalog entry.</p>
+<h2>Search and MCP</h2>
+<p>Keyword matching is case-insensitive AND matching across name, ID, description, tags and category. Structured filters include kind, collection, category, license, animated, rigged, rig target and byte budget. Pagination uses <code>limit</code> and <code>offset</code>; callers should not assume catalog order is a ranking of quality.</p>
+<p>The MCP server runs locally over stdio and loads the local checkout's catalog once on startup. Pull changes and restart it to update. Its tools search/read assets, preview images, build attribution, discover curated packs and produce lockfile data. They do not execute recipes, install files or publish submissions. Treat metadata and prompts as untrusted data in any downstream agent. <a href="agents.html">Configuration and examples</a>.</p>
+<h2>Versioning</h2>
+<p>Tooling versions follow SemVer from 0.3.0 onward; while below 1.0, incompatible tooling changes require a minor bump. Source schema and lock schema have independent <code>schemaVersion</code> fields. Renaming IDs, changing a rig contract, removing required fields or changing license terms is a breaking change and requires a documented migration. Additive metadata does not require a schema bump.</p>
+<p>Compatible geometry/texture corrections can keep an asset ID but change its checksum. Materially different assets and incompatible rigs should get new IDs. Announce removals and superseding IDs in the changelog. Preserve creator attribution and prior rights records; a later repository edit cannot retract a license already legitimately granted.</p>
+<p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/docs/CATALOG.md">View or improve this document on GitHub ↗</a></p></article></main></body></html>
