@@ -31,13 +31,13 @@
     "@gltf-transform/extensions": "4.5.0",
     "@gltf-transform/functions": "4.5.0",
     "@playwright/test": "1.63.0",
-    "esbuild": "0.25.12",
+    "esbuild": "0.28.2",
     "fflate": "0.8.3",
     "gltf-validator": "2.0.0-dev.3.10",
     "markdown-it": "15.0.2",
     "meshoptimizer": "1.2.0",
     "prettier": "3.9.6",
     "sharp": "0.35.4",
-    "three": "0.185.1"
+    "three": "0.186.0"
   }
 }
