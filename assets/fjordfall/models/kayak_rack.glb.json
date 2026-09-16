@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "cdc267372b6441d712b0ec615318fc6f047c05e6fea860069d060d2e04110f6c",
+  "recipe": "tools/blender/kayak.py",
+  "generated": "2026-09-13T14:01:05.966Z",
+  "license": "CC-BY-4.0"
+}

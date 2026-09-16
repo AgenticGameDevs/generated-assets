@@ -1,0 +1,7 @@
+{
+  "source": "Existing Meshy reindeer; antler geometry refined in Blender; original baked atlas retained",
+  "originalAssetSha256": "c1e7276b4ccf6dcee445e5f62315ff9cae00b73717ddf1ca83c3aa0ab4c8dec4",
+  "recipe": "tools/blender/reindeer_variant.py",
+  "generated": "2026-09-13T07:33:52.021Z",
+  "license": "CC-BY-4.0"
+}

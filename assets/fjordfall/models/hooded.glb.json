@@ -1,0 +1,18 @@
+{
+  "source": "Original Blender body; preserved rider-before-blender rig; nine unchanged shipped rider actions",
+  "originalAssetSha256": "68ececbc5e26e069b548c620de9accbb97a96bf4cb7cbe06fa5def262742baff",
+  "recipe": "tools/blender/hooded.py",
+  "animations": [
+    "Fjordfall_Idle",
+    "Fjordfall_Jog",
+    "Fjordfall_Jump",
+    "Fjordfall_Row",
+    "Fjordfall_Sail",
+    "Fjordfall_SkateCruise",
+    "Fjordfall_SkatePush",
+    "Fjordfall_SkateTuck",
+    "Fjordfall_Walk"
+  ],
+  "generated": "2026-09-14T02:18:46.963Z",
+  "license": "CC-BY-4.0"
+}

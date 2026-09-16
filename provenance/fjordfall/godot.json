@@ -1,0 +1,38 @@
+[
+  {
+    "name": "sheep",
+    "prompt": "A single Norwegian sheep standing four-square, thick cream-white wool in soft rounded clumps, dark grey face and slender dark legs, small ears, compact stocky body. One animal on its own, no base, no ground plane.",
+    "negative": "base, pedestal, ground plane, grass, multiple animals, lamb, text, person, fence",
+    "polycount": 3000,
+    "symmetry": "on",
+    "refine": true,
+    "texturePrompt": "cream-white wool with soft grey shadows in the clumps, dark charcoal face and legs, matte"
+  },
+  {
+    "name": "spruce",
+    "prompt": "A single Norway spruce tree, tall narrow conical crown of dark green needled branches drooping slightly at the tips, layered whorls, straight brown trunk showing at the base. One tree on its own, no ground, no base.",
+    "negative": "base, pedestal, ground plane, grass, rocks, multiple trees, forest, snow, text",
+    "polycount": 2500,
+    "symmetry": "off",
+    "refine": true,
+    "texturePrompt": "dark blue-green spruce needles, reddish-brown bark, matte"
+  },
+  {
+    "name": "birch",
+    "prompt": "A single mountain birch tree, slender white trunk with dark horizontal markings, slightly crooked, an open rounded crown of small light green leaves on fine drooping twigs. One tree on its own, no ground, no base.",
+    "negative": "base, pedestal, ground plane, grass, rocks, multiple trees, forest, autumn, text",
+    "polycount": 2500,
+    "symmetry": "off",
+    "refine": true,
+    "texturePrompt": "chalk-white birch bark with black lenticel streaks, fresh light green leaves, matte"
+  },
+  {
+    "name": "car",
+    "prompt": "A single small modern estate car, compact Scandinavian family car, plain silver-grey paint, closed doors and windows, four wheels with plain hubcaps, roof rails, no text, no logos, no badges. One car on its own, no base, no ground plane.",
+    "negative": "base, pedestal, ground plane, road, text, logo, badge, license plate, people, multiple cars, open doors",
+    "polycount": 6000,
+    "symmetry": "on",
+    "refine": true,
+    "texturePrompt": "silver-grey metallic paint, dark tinted glass, black rubber tyres, satin"
+  }
+]

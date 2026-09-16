@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "02fc8d28205e246d8e34cfe8a0280c80dbd6b7b9823a5e75018ae41e10ff78dd",
+  "recipe": "tools/blender/church.py",
+  "generated": "2026-09-13T13:33:17.263Z",
+  "license": "CC-BY-4.0"
+}

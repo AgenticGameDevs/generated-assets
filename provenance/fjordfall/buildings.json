@@ -1,0 +1,38 @@
+[
+  {
+    "name": "farmhouse",
+    "prompt": "A single traditional Norwegian farmhouse, a two-storey white-painted wooden house with a steep dark slate roof, small-paned windows, a small entrance porch, a brick chimney. One building on its own, no base, no ground plane, no trees.",
+    "negative": "base, pedestal, ground plane, grass, trees, fence, people, multiple buildings, text",
+    "polycount": 4000,
+    "symmetry": "auto",
+    "refine": true,
+    "texturePrompt": "white painted clapboard, dark grey slate roof, dark window frames, weathered, matte"
+  },
+  {
+    "name": "barn",
+    "prompt": "A single traditional Norwegian farm barn, a long red-painted wooden barn with a gable roof of dark corrugated sheet, a large sliding door on the long side, a ramp up to a hayloft door on the gable end. One building on its own, no base, no ground plane.",
+    "negative": "base, pedestal, ground plane, grass, trees, animals, people, multiple buildings, text",
+    "polycount": 3500,
+    "symmetry": "auto",
+    "refine": true,
+    "texturePrompt": "faded red painted boards, dark grey corrugated roof, weathered, matte"
+  },
+  {
+    "name": "stabbur",
+    "prompt": "A single Norwegian stabbur, a small log storehouse raised on short stone pillars, with an overhanging upper storey, a turf roof, a small door reached by a detached stone step. One building on its own, no base, no ground plane.",
+    "negative": "base, pedestal, ground plane, grass, trees, people, multiple buildings, text",
+    "polycount": 3000,
+    "symmetry": "auto",
+    "refine": true,
+    "texturePrompt": "dark weathered log walls, green turf roof, grey stone pillars, matte"
+  },
+  {
+    "name": "seterbu",
+    "prompt": "A single small Norwegian seter hut, a low log cabin of dark timber with a green turf roof, a single small door, one tiny window, a stone base. One building on its own, no base, no ground plane.",
+    "negative": "base, pedestal, ground plane, grass, trees, people, multiple buildings, text, snow",
+    "polycount": 2500,
+    "symmetry": "auto",
+    "refine": true,
+    "texturePrompt": "dark tarred log walls, thick green turf roof with grass, grey stone base, matte"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "eaa93f7f049c516f2c70f1bdedec6f190ee6b51f104f54f7491ec0a082cd1412",
+  "recipe": "tools/blender/rasteplass.py",
+  "generated": "2026-09-13T08:18:40.880Z",
+  "license": "CC-BY-4.0"
+}

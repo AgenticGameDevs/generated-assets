@@ -1,0 +1,49 @@
+# Generated Assets
+
+An open asset collection from **Fjordfall** and **SKYBOUND** (the local Superman flight-game prototype). Models, textures, illustrated UI pieces, procedural sound effects, and the workflows behind them.
+
+**[Browse the gallery](https://jonathanwmaddison.github.io/generated-assets/)** · [Asset manifest](manifest.json) · [Workflows](workflows/README.md) · [Licenses](LICENSE.md)
+
+## Use the collection
+
+Download individual files through the gallery, clone this repository, or use GitHub's **Code → Download ZIP**. Everything under `assets/` is a real file, not a Git LFS pointer.
+
+```sh
+git clone https://github.com/jonathanwmaddison/generated-assets.git
+cd generated-assets
+npm start
+```
+
+Open http://127.0.0.1:4178. Serving the gallery needs only Node 22+, with no install step. Its Three.js viewer is vendored for offline use. The gallery also works as a static site on GitHub Pages.
+
+Models are GLB/glTF 2.0. Some Fjordfall models require `EXT_meshopt_compression`, `KHR_mesh_quantization`, or `EXT_texture_webp`; use a compatible loader or convert them for your engine. Embedded images and vertex colors stay with each GLB. Game-specific wind shaders, collision, IK and behavior are not baked into these files. Character GLBs retain their authored animation clips.
+
+Textures are WebP or PNG. The `-512` files are smaller mobile variants. An image intended to tile is not a guarantee of a perfectly invisible seam. The preview provides neutral lighting rather than reproducing either game's rendering.
+
+## Licenses and attribution
+
+Most media is **CC BY 4.0**. The original flock-bell recording retains its **CC0** dedication. Generator and gallery code is **MIT**; vendored Three.js keeps its own MIT notice. Per-file media licenses are in `manifest.json` and the gallery.
+
+Suggested attribution: “Assets by Jonathan Maddison, Generated Assets (CC BY 4.0). Meshy-generated models created with Meshy.” Link to this repository, retain the license link, and note your modifications. The Meshy credit is retained because historical account tiers were not independently verified; it also satisfies the attribution requirement for free-plan generations.
+
+## What is included
+
+- Fjordfall: buildings, vegetation, wildlife, boats, furniture, road props, reusable characters, generated surface textures, illustrated marks, and original synthesized bells.
+- SKYBOUND: four exported procedural scenery models, six exported synthesized effects, and the source geometry/audio generators.
+- Historical image/model prompts where available, sanitized provenance, SHA-256 checksums, and a reusable agent skill.
+
+ElevenLabs-generated sound files are **excluded**: their standalone redistribution restriction is incompatible with an asset library. Hero-specific artwork, unconfirmed reference-image derivatives, and files without sufficient provenance are listed in [excluded.json](excluded.json). Game databases, user pictures, email hashes and private save data are not part of this repository.
+
+## Maintain or regenerate
+
+```sh
+npm install                    # only needed to regenerate model exports
+npm run export:models
+# Godot 4.x is needed for sound regeneration:
+godot --headless --path generators/skybound/godot --editor --import --quit
+godot --headless --path generators/skybound/godot --script export.gd
+npm run catalog
+npm run verify
+```
+
+The reusable skill lives in [`skills/game-asset-pipeline`](skills/game-asset-pipeline/SKILL.md). Point your agent at it in this checkout so its relative links to workflows and recipes resolve. It describes the practices used in these projects; it is newly packaged for this release, not a claim that a historical skill ran every generation.

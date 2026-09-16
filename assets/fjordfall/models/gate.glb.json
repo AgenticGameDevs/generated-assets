@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "1d12907c942a0e38d105f15416eafb40467caa44e450b51fab49626bb548f684",
+  "recipe": "tools/blender/gate.py",
+  "generated": "2026-09-13T07:39:07.961Z",
+  "license": "CC-BY-4.0"
+}

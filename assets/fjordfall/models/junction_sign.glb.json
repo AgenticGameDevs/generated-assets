@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "f3030ccf375cdcf0423ebcaa5ec39d64bb666bb8bea0c4627f85a902e6685741",
+  "recipe": "tools/blender/junction_sign.py",
+  "generated": "2026-09-15T09:36:30.483Z",
+  "license": "CC-BY-4.0"
+}

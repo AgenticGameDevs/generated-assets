@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "4770aedcf5e6c3e0035d9f8640bd6bf2476c03c6c656dbefba479bfeb3e9d748",
+  "recipe": "tools/blender/weather_mast.py",
+  "generated": "2026-09-13T16:56:28.746Z",
+  "license": "CC-BY-4.0"
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "ferry",
+    "prompt": "A single small Norwegian fjord car ferry, double-ended with a bow ramp at each end, open car deck low over the water, white superstructure with a wheelhouse to one side, a red funnel, a black-and-white hull. One vessel on its own, no water, no base, no ground plane.",
+    "negative": "base, pedestal, water, waves, ground plane, dock, people, cars, multiple boats, text",
+    "polycount": 6000,
+    "symmetry": "on",
+    "refine": true,
+    "texturePrompt": "white superstructure, dark blue-black hull with a white band, red funnel, grey steel car deck, weathered, matte"
+  },
+  {
+    "name": "bus",
+    "prompt": "A single modern Norwegian rural route bus, a plain single-deck coach with large windows, closed doors, four wheels, cream-white and dark green livery, no text, no logos. One bus on its own, no base, no ground plane.",
+    "negative": "base, pedestal, ground plane, road, text, logo, people, multiple buses, open doors, double-decker",
+    "polycount": 5000,
+    "symmetry": "on",
+    "refine": true,
+    "texturePrompt": "cream-white body with a dark green band, dark tinted windows, black tyres, satin"
+  },
+  {
+    "name": "tractor",
+    "prompt": "A single small old farm tractor with an enclosed cab, big rear wheels and small front wheels, green body with a grey engine hood, no trailer, no implements. One tractor on its own, no base, no ground plane.",
+    "negative": "base, pedestal, ground plane, trailer, plough, people, multiple tractors, text, logo",
+    "polycount": 4000,
+    "symmetry": "on",
+    "refine": true,
+    "texturePrompt": "faded green paint with rust at the edges, grey engine hood, black rubber tyres with deep lugs, matte"
+  }
+]

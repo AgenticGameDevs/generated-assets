@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "6e59b1777154151cf8d6674e2cd432f90a199935e280b75fe44195ec6034fc37",
+  "recipe": "tools/blender/angler.py",
+  "generated": "2026-09-14T12:06:48.838Z",
+  "license": "CC-BY-4.0"
+}

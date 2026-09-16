@@ -1,0 +1,12 @@
+{
+  "name": "generated-assets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "export:models": "node scripts/export-models.mjs",
+    "catalog": "node scripts/catalog.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {"three": "0.185.1", "esbuild": "0.25.12"}
+}

@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "1f2489a8e72056d4011f781e325da7721f3e45b7086e096d2d5dd66fb25dcd1c",
+  "recipe": "tools/blender/steingard.py",
+  "generated": "2026-09-13T07:56:59.458Z",
+  "license": "CC-BY-4.0"
+}

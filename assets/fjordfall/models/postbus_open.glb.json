@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "559f9d6e03b54b3e0224de48bd8caa4306236365d1c1a93df9adbf0b8541d2a1",
+  "recipe": "tools/blender/postbus.py",
+  "generated": "2026-09-13T19:05:12.050Z",
+  "license": "CC-BY-4.0"
+}

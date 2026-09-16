@@ -1,0 +1,742 @@
+{
+  "version": 1,
+  "model": "gpt-image-2.5-sunburst-2026-09-08",
+  "style": "Fjordfall is a quiet Norwegian exploration game. Materials are restrained, tactile and natural. Output a single production image asset, never a mockup, UI screen, contact sheet, palette, caption, diagram, logo or watermark. No lettering, symbols, scene perspective or baked lighting.",
+  "assets": [
+    {
+      "id": "ui-paper",
+      "group": "ui",
+      "name": "Field-guide paper",
+      "consumer": "ASSETS.uiPaper \u2192 src/ui/materials.ts \u2192 map and memory sheet backgrounds",
+      "target": "public/assets/ui/field-paper.webp",
+      "size": [
+        512,
+        512
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": true,
+      "maxBytes": 90000,
+      "prompt": "A seamless repeating flat warm-white paper surface, viewed perfectly orthogonally and filling every pixel. Extremely fine short natural paper fibers at subtle contrast; smooth, clean, lightly uncoated book paper. Very uniform warm ivory near #F3EFE4, variations no more than a few percent. No stains, flecks, creases, folds, border, torn edges, vignetting, directional shadows, tabletop or printed content. Opposing edges should match; avoid recognizable features that repeat. This is the quiet material underneath small dark UI text, not artwork."
+    },
+    {
+      "id": "ui-postcard-border",
+      "group": "ui",
+      "name": "Postcard paper border",
+      "consumer": "ASSETS.uiPostcardBorder \u2192 memory photos and downloaded postcards; 96px nine-slice at a 512px export",
+      "target": "public/assets/ui/postcard-border.webp",
+      "size": [
+        512,
+        512
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 140000,
+      "prompt": "One production square paper picture-frame asset on a genuinely transparent canvas. Straight orthographic view. A precise uniform rectangular ring of clean warm ivory paper near #F3EFE4. Outer square edge at 2% inset from the canvas; inner square opening from 12.5% to 87.5% on both axes. All four sides have exactly the same width; corners are square and perfectly aligned. Almost invisible fine uncoated paper fibers, no specks or printed marks. Exterior and large center opening are fully transparent alpha zero. Use clean smooth antialiased cut edges, with ivory RGB only at partially transparent edge pixels. No rough or torn edges, colored pixels, dark outlines, shadows, checkerboard pattern, perspective, photograph, text, texture outside the paper, or background. This is one empty neutral ivory ring to be nine-sliced around real game photographs. Deliver the clean RGBA asset only."
+    },
+    {
+      "id": "asphalt",
+      "group": "world",
+      "name": "Dry mountain asphalt",
+      "consumer": "ASSETS.texAsphalt \u2192 src/render/road.ts",
+      "target": "public/assets/tex/asphalt.webp",
+      "size": [
+        1024,
+        1024
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": true,
+      "maxBytes": 400000,
+      "prompt": "One seamless tileable base-color material texture. Orthographic top-down crop filling every pixel, consistent scale edge to edge, flat diffuse illumination, matching opposing edges. Medium dark neutral grey Norwegian road asphalt, small aggregate, uniform fine grain. No road markings, cracks, wet patches, puddles, debris or directional shadows. Neutral albedo for tinting by the renderer."
+    },
+    {
+      "id": "rock",
+      "group": "world",
+      "name": "Norwegian bedrock",
+      "consumer": "ASSETS.texRock \u2192 src/render/detail.ts",
+      "target": "public/assets/tex/rock.webp",
+      "size": [
+        1024,
+        1024
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": true,
+      "maxBytes": 400000,
+      "prompt": "One seamless tileable base-color material texture. Orthographic top-down crop filling every pixel, consistent scale edge to edge, flat diffuse illumination, matching opposing edges. Neutral mid-grey Scandinavian gneiss bedrock with fine understated mineral grain and subtle irregular veins. No separate boulders, deep cracks, moss islands or directional light. Flat albedo texture with broad quiet variation."
+    },
+    {
+      "id": "moss",
+      "group": "world",
+      "name": "Mossy ground",
+      "consumer": "ASSETS.texMoss \u2192 src/render/detail.ts",
+      "target": "public/assets/tex/moss.webp",
+      "size": [
+        1024,
+        1024
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": true,
+      "maxBytes": 400000,
+      "prompt": "One seamless tileable base-color material texture. Orthographic top-down crop filling every pixel, consistent scale edge to edge, flat diffuse illumination, matching opposing edges. Dense fine moss and low mountain ground vegetation seen straight down, muted grey-green and olive with gentle unevenness. No individual flowers, pebbles, branches, empty ground or identifiable objects. Small scale texture, no broad dark patches."
+    },
+    {
+      "id": "snow",
+      "group": "world",
+      "name": "Packed alpine snow",
+      "consumer": "ASSETS.texSnow \u2192 src/render/detail.ts",
+      "target": "public/assets/tex/snow.webp",
+      "size": [
+        1024,
+        1024
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": true,
+      "maxBytes": 400000,
+      "prompt": "One seamless tileable base-color material texture. Orthographic top-down crop filling every pixel, consistent scale edge to edge, flat diffuse illumination, matching opposing edges. Uniform clean slightly off-white alpine snow, extremely subtle fine crystalline grain and small compacted variation. No footprints, ridges, ice chunks, rocks, blue shadows, sparkle highlights or objects. The renderer supplies light and snow color."
+    },
+    {
+      "id": "gravel",
+      "group": "world",
+      "name": "Roadside gravel",
+      "consumer": "ASSETS.texGravel \u2192 src/render/road.ts \u2192 both gravel shoulders in the shared road atlas",
+      "target": "public/assets/tex/gravel.webp",
+      "size": [
+        1024,
+        1024
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": true,
+      "maxBytes": 400000,
+      "prompt": "One seamless tileable base-color material texture. Orthographic top-down crop filling every pixel, consistent scale edge to edge, flat diffuse illumination, matching opposing edges. A dense level surface of small angular grey roadside aggregate, mixed tiny stones in neutral grey mineral tones. No large rocks or scattered objects; uniform scale and density, gentle contrast, flat diffuse albedo without shadows."
+    },
+    {
+      "id": "weathered-timber",
+      "group": "world",
+      "name": "Weathered fjord timber",
+      "consumer": "Jetties and discovery timber: village.ts and discoveries.ts",
+      "target": "public/assets/tex/weathered_timber.webp",
+      "size": [
+        512,
+        512
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": true,
+      "maxBytes": 150000,
+      "physicalScale": "2 metres along grain, 1 metre across",
+      "palette": "#B7A994, #A69E90, #C8BDA9",
+      "viewingDistance": "Walking range: 1\u201335 metres; reduce detail beyond 80 metres",
+      "prompt": "A seamless flat base-color timber surface with grain running vertically. Broad flowing grey-beige weathered wood grain, softened fine lines, occasional very subtle knots, gently hand-painted gouache treatment. Restrained contrast, matte salt-worn Scandinavian timber. Continuous wood only; no plank seams, nail heads, cracks, shadows, boards in perspective, harsh grain or photographic microdetail."
+    },
+    {
+      "id": "cabin-paint",
+      "group": "world",
+      "name": "Brushed cabin paint",
+      "consumer": "Village fallback cabin walls: village.ts",
+      "target": "public/assets/tex/cabin_paint.webp",
+      "size": [
+        512,
+        512
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": true,
+      "maxBytes": 150000,
+      "physicalScale": "2 metres per tile",
+      "palette": "#D5C9BB, #E2D9CC, #C2B7A9",
+      "viewingDistance": "Walking range: 1\u201335 metres; reduce detail beyond 80 metres",
+      "prompt": "A seamless neutral warm ivory painted timber base-color surface. Vertical broad restrained brush strokes and soft underlying wood grain. Very subtle weathering, smooth matte hand-painted gouache character, low contrast. Neutral light paint intended to be tinted red or cream by the game. No board gaps, windows, doors, chipped holes, stains, shadows or photographic detail."
+    },
+    {
+      "id": "ground-transition",
+      "group": "world",
+      "name": "Moss and gravel ground patch",
+      "consumer": "Terrain-fitted patches at jetty approaches: surfacePatches.ts",
+      "target": "public/assets/tex/ground_transition.webp",
+      "size": [
+        512,
+        512
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 150000,
+      "physicalScale": "3 metres across",
+      "palette": "#777E62, #92907A, #A2A18F",
+      "viewingDistance": "Walking range: 1\u201335 metres; reduce detail beyond 80 metres",
+      "prompt": "One irregular flat sparse island of muted moss and tiny grey gravel fragments on real transparent background, viewed directly from above. Hand-painted simplified gouache shapes. A gently connected softly mottled center, broken ragged perimeter with isolated tiny fragments becoming sparse towards edges. Leave outer 10 percent entirely transparent. No ground rectangle, cast shadows, perspective, large rocks, flowers or white fringe. Opaque pixels in moss and stone centers, genuine alpha between fragments."
+    },
+    {
+      "id": "lichen",
+      "group": "world",
+      "name": "Sage and ochre lichen",
+      "consumer": "Boulder surface overlay: scatter.ts via surfaceMaterials.ts",
+      "target": "public/assets/tex/lichen.webp",
+      "size": [
+        512,
+        512
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": true,
+      "maxBytes": 150000,
+      "physicalScale": "1.8 metres per repeat",
+      "palette": "#ADB59A, #C1BA8B, #909B82",
+      "viewingDistance": "Walking range: 1\u201335 metres; reduce detail beyond 80 metres",
+      "prompt": "A seamless sparse distribution of flat crustose lichen islands on real transparent background. Soft irregular rounded lobes in sage grey and pale muted ochre, matte hand-painted gouache, quiet broad shapes with fine scalloped edges. Cover only about 25 percent of canvas; remaining pixels transparent. No rock base, shadows, relief, outlines, moss strands or photographic grain. Small islands scattered unevenly with transparent gaps; opposing edges should tile."
+    },
+    {
+      "id": "place-mountain",
+      "group": "ui",
+      "name": "Summit and lookouts",
+      "consumer": "ASSETS.uiPlaceArt \u2192 src/ui/worldMap.ts art() \u2192 the field guide's place card when the traveller has no photograph of it yet",
+      "target": "public/assets/ui/place-mountain.webp",
+      "size": [
+        768,
+        512
+      ],
+      "generationSize": "1536x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": false,
+      "maxBytes": 140000,
+      "prompt": "A high Norwegian mountain plateau in late summer seen from a lookout: bare grey-brown rock and patches of old snow, a thin grey road curving away and down toward a distant blue fjord far below, a small stone cairn at the edge, soft evening light, vast still air. Painted as a quiet, restrained gouache and pencil illustration in a muted palette of warm paper white, pine green, slate blue and terracotta, matte, flat lighting, no text, no border, no people, generous empty sky, the calm of a field-guide plate. Fill the whole frame."
+    },
+    {
+      "id": "place-quay",
+      "group": "ui",
+      "name": "The shore, the quay, the lighthouse",
+      "consumer": "ASSETS.uiPlaceArt \u2192 src/ui/worldMap.ts art() \u2192 the field guide's place card when the traveller has no photograph of it yet",
+      "target": "public/assets/ui/place-quay.webp",
+      "size": [
+        768,
+        512
+      ],
+      "generationSize": "1536x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": false,
+      "maxBytes": 140000,
+      "prompt": "A quiet Norwegian fjord shore at dusk: a small timber jetty on dark green-blue water, one white rowing boat moored, a red boathouse, low mountains across the water, calm reflections, no people. Painted as a quiet, restrained gouache and pencil illustration in a muted palette of warm paper white, pine green, slate blue and terracotta, matte, flat lighting, no text, no border, no people, generous empty sky, the calm of a field-guide plate. Fill the whole frame."
+    },
+    {
+      "id": "place-house",
+      "group": "ui",
+      "name": "A seter, a hamlet",
+      "consumer": "ASSETS.uiPlaceArt \u2192 src/ui/worldMap.ts art() \u2192 the field guide's place card when the traveller has no photograph of it yet",
+      "target": "public/assets/ui/place-house.webp",
+      "size": [
+        768,
+        512
+      ],
+      "generationSize": "1536x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": false,
+      "maxBytes": 140000,
+      "prompt": "A small Norwegian mountain farm in summer: a white timber farmhouse and a red barn on a green slope, a few spruce, a grazing sheep, a stone wall, evening sun raking across the grass, the fjord a pale line far below. Painted as a quiet, restrained gouache and pencil illustration in a muted palette of warm paper white, pine green, slate blue and terracotta, matte, flat lighting, no text, no border, no people, generous empty sky, the calm of a field-guide plate. Fill the whole frame."
+    },
+    {
+      "id": "place-fall",
+      "group": "ui",
+      "name": "The waterfall",
+      "consumer": "ASSETS.uiPlaceArt \u2192 src/ui/worldMap.ts art() \u2192 the field guide's place card when the traveller has no photograph of it yet",
+      "target": "public/assets/ui/place-fall.webp",
+      "size": [
+        768,
+        512
+      ],
+      "generationSize": "1536x1024",
+      "quality": "high",
+      "alpha": false,
+      "tileable": false,
+      "maxBytes": 140000,
+      "prompt": "A slender white waterfall dropping down a dark wet rock face into a plunge pool beside a Norwegian mountain road, spray hanging in cool air, moss and birch at the edges, soft overcast light, quiet. Painted as a quiet, restrained gouache and pencil illustration in a muted palette of warm paper white, pine green, slate blue and terracotta, matte, flat lighting, no text, no border, no people, generous empty sky, the calm of a field-guide plate. Fill the whole frame."
+    },
+    {
+      "id": "mark-hare",
+      "group": "ui",
+      "name": "Diary emblem: mountain hare",
+      "consumer": "MARKS 'hare' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-hare.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A mountain hare sitting alert in profile, ears up, haunches gathered, the way it sits on the tarmac of the summit road at dusk. Whole animal, side view, no ground line, no snow, nothing else in the square."
+    },
+    {
+      "id": "mark-moose",
+      "group": "ui",
+      "name": "Diary emblem: elg",
+      "consumer": "MARKS 'moose' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-moose.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A bull moose standing in profile, heavy shoulders and broad palmate antlers, head slightly lowered. Whole animal, side view, no ground line, nothing else in the square."
+    },
+    {
+      "id": "mark-fieldfares",
+      "group": "ui",
+      "name": "Diary emblem: fieldfare",
+      "consumer": "MARKS 'fieldfares' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-fieldfares.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A single fieldfare thrush perched on a short rowan twig with three or four berries on it, seen from the side. Nothing else in the square."
+    },
+    {
+      "id": "mark-eiders",
+      "group": "ui",
+      "name": "Diary emblem: eider",
+      "consumer": "MARKS 'eiders' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-eiders.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A common eider drake floating on water in profile, the long wedge of its bill running straight from the forehead, a few short water lines under the breast. Nothing else."
+    },
+    {
+      "id": "mark-salmon",
+      "group": "ui",
+      "name": "Diary emblem: salmon",
+      "consumer": "MARKS 'salmon' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-salmon.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A salmon leaping, arched nose-up out of the water, seen from the side, with two or three short lines of falling water behind its tail. Nothing else."
+    },
+    {
+      "id": "mark-reindeer",
+      "group": "ui",
+      "name": "Diary emblem: reindeer",
+      "consumer": "MARKS 'reindeer' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-reindeer.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A reindeer standing in profile with tall curved antlers, head up, legs straight. Whole animal, side view, no ground line, nothing else."
+    },
+    {
+      "id": "mark-cows",
+      "group": "ui",
+      "name": "Diary emblem: Norwegian Red cow",
+      "consumer": "MARKS 'cows' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-cows.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A Norwegian Red cow standing in profile, small horns, a bell at the neck, head turned slightly toward the viewer. Whole animal, no ground line, nothing else."
+    },
+    {
+      "id": "mark-geese",
+      "group": "ui",
+      "name": "Diary emblem: greylag geese",
+      "consumer": "MARKS 'geese' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-geese.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "Five greylag geese in a shallow V, seen from below and slightly behind, wings out, small and simple. Nothing else in the square."
+    },
+    {
+      "id": "mark-summit",
+      "group": "ui",
+      "name": "Diary emblem: summit cairn",
+      "consumer": "MARKS 'summit' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-summit.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A bare rounded fell summit with a small stone cairn on top, seen from the side as a simple profile of the hill. Nothing else."
+    },
+    {
+      "id": "mark-high-places",
+      "group": "ui",
+      "name": "Diary emblem: the high places",
+      "consumer": "MARKS 'high-places' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-high-places.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "Three fell tops of different heights in a row, seen as a simple skyline profile, a tiny cairn on each. Nothing else."
+    },
+    {
+      "id": "mark-first-ride",
+      "group": "ui",
+      "name": "Diary emblem: first ride",
+      "consumer": "MARKS 'first-ride' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-first-ride.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A longboard skateboard seen from the side, deck and two trucks and four wheels, slightly tilted as if rolling. Nothing else."
+    },
+    {
+      "id": "mark-whole-road",
+      "group": "ui",
+      "name": "Diary emblem: a whole road",
+      "consumer": "MARKS 'whole-road' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-whole-road.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A mountain road drawn as a single ribbon of switchbacks descending from top to bottom of the square, seen obliquely from above. Nothing else."
+    },
+    {
+      "id": "mark-shore-roads",
+      "group": "ui",
+      "name": "Diary emblem: every road of a shore",
+      "consumer": "MARKS 'shore-roads' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-shore-roads.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "Three roads branching from one another like a river delta, drawn as simple ribbons seen from above. Nothing else."
+    },
+    {
+      "id": "mark-night-ride",
+      "group": "ui",
+      "name": "Diary emblem: a night ride",
+      "consumer": "MARKS 'night-ride' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-night-ride.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A crescent moon with four small stars around it. Nothing else."
+    },
+    {
+      "id": "mark-note",
+      "group": "ui",
+      "name": "Diary emblem: a note left behind",
+      "consumer": "MARKS 'note' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-note.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A single sheet of paper pinned to nothing, one corner curling, a few short horizontal strokes standing for handwriting. Nothing else."
+    },
+    {
+      "id": "mark-three-notes",
+      "group": "ui",
+      "name": "Diary emblem: notes at three places",
+      "consumer": "MARKS 'three-notes' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-three-notes.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "Three small sheets of paper overlapping in a loose fan, each with two short strokes of handwriting. Nothing else."
+    },
+    {
+      "id": "mark-picture",
+      "group": "ui",
+      "name": "Diary emblem: a shared picture",
+      "consumer": "MARKS 'picture' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-picture.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A simple folding camera seen from the front, lens circle and shutter release. Nothing else."
+    },
+    {
+      "id": "mark-picture-vote",
+      "group": "ui",
+      "name": "Diary emblem: a picture voted for",
+      "consumer": "MARKS 'picture-vote' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-picture-vote.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A small photograph with a curling corner and a single hand-drawn heart resting at its lower right. Nothing else."
+    },
+    {
+      "id": "mark-timber",
+      "group": "ui",
+      "name": "Diary emblem: an armful of timber",
+      "consumer": "MARKS 'timber' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-timber.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "An armful of four split logs bound together, seen from the side. Nothing else."
+    },
+    {
+      "id": "mark-fire",
+      "group": "ui",
+      "name": "Diary emblem: a fire lit",
+      "consumer": "MARKS 'fire' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-fire.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A small bonfire of three crossed logs with a simple flame above them. Nothing else."
+    },
+    {
+      "id": "mark-stone",
+      "group": "ui",
+      "name": "Diary emblem: a stone on a cairn",
+      "consumer": "MARKS 'stone' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-stone.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A cairn of five rounded stones stacked one on another, largest at the bottom. Nothing else."
+    },
+    {
+      "id": "mark-idea",
+      "group": "ui",
+      "name": "Diary emblem: an idea for the maker",
+      "consumer": "MARKS 'idea' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-idea.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A sealed envelope seen from the front with its flap triangle showing. Nothing else."
+    },
+    {
+      "id": "mark-row",
+      "group": "ui",
+      "name": "Diary emblem: oars in the water",
+      "consumer": "MARKS 'row' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-row.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A wooden rowing boat seen from the side with two oars out, a few short water lines beneath. Nothing else."
+    },
+    {
+      "id": "mark-sail",
+      "group": "ui",
+      "name": "Diary emblem: under sail",
+      "consumer": "MARKS 'sail' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-sail.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A small open sailing boat seen from the side with a single triangular sail full of wind. Nothing else."
+    },
+    {
+      "id": "mark-crossing",
+      "group": "ui",
+      "name": "Diary emblem: another shore",
+      "consumer": "MARKS 'crossing' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-crossing.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A fjord drawn as two facing headlands with a line of water between them and a tiny boat midway across. Nothing else."
+    },
+    {
+      "id": "mark-lift",
+      "group": "ui",
+      "name": "Diary emblem: a lift up",
+      "consumer": "MARKS 'lift' emblem \u2192 src/ui/journeyMarks.ts \u2192 the Marks page in the Turkart",
+      "target": "public/assets/ui/mark-lift.webp",
+      "size": [
+        160,
+        160
+      ],
+      "generationSize": "1024x1024",
+      "quality": "high",
+      "alpha": true,
+      "tileable": false,
+      "maxBytes": 14000,
+      "style": "Fjordfall is a quiet Norwegian exploration game. This asset is a diary emblem: a single small mark drawn as if inked by hand in a field notebook, the way a naturalist sketches a creature in the margin. One subject, centred, seen plainly from the side or from above, filling most of the square with a little air around it. Ink line only \u2014 a warm off-black line of even weight on a fully transparent background, no fill, no shading, no gradient, no colour, no texture, no paper, no frame, no border, no circle around it, no ribbon, no badge or medal shape, no lettering, no numbers, no watermark, no drop shadow, no perspective scene and no background elements of any kind. The line should be confident and slightly irregular, as a pen makes it, and unbroken enough to read at forty pixels across.",
+      "prompt": "A single cable-car gondola hanging from a cable that runs off both sides of the square. Nothing else."
+    }
+  ]
+}

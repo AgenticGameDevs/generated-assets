@@ -1,0 +1,11 @@
+[
+ {
+  "name": "ferjeskur",
+  "prompt": "A single small Norwegian ferry quay waiting shelter: a tiny open-fronted wooden shed painted ochre yellow with white trim, a pitched roof of dark grey roofing felt, a wooden bench inside, a small timetable board on the wall. One building on its own, no base, no ground plane.",
+  "negative": "base, pedestal, ground plane, grass, people, boats, water, multiple buildings, text",
+  "polycount": 2500,
+  "symmetry": "auto",
+  "refine": true,
+  "texturePrompt": "ochre yellow painted boards, white window and door trim, dark grey roofing felt, weathered, matte"
+ }
+]

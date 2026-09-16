@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "0d467de90084c997da30439a108c1a20aec87034be6572042a41de067e97ab20",
+  "recipe": "tools/blender/cow.py",
+  "generated": "2026-09-13T21:58:11.910Z",
+  "license": "CC-BY-4.0"
+}

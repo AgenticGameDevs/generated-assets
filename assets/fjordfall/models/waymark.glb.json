@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "06450fd0dba231218f42bc4ce2f9f96841705374cd4be42b8a6b33a2fd7beaa7",
+  "recipe": "tools/blender/waymark.py",
+  "generated": "2026-09-13T07:33:52.836Z",
+  "license": "CC-BY-4.0"
+}

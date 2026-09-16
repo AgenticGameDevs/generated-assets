@@ -1,0 +1,18 @@
+{
+  "source": "Meshy rig, refined and animated in Blender 5.2 through Blender Lab MCP",
+  "originalAssetSha256": "0bf4669fc9a95929ad199c50b86fe47eecb17c02a34bd28a162ac5993ec0b8b3",
+  "recipe": "tools/blender/character.py",
+  "animations": [
+    "Fjordfall_Idle",
+    "Fjordfall_Jog",
+    "Fjordfall_Jump",
+    "Fjordfall_Row",
+    "Fjordfall_Sail",
+    "Fjordfall_SkateCruise",
+    "Fjordfall_SkatePush",
+    "Fjordfall_SkateTuck",
+    "Fjordfall_Walk"
+  ],
+  "generated": "2026-09-12T23:10:09.626Z",
+  "license": "CC-BY-4.0"
+}

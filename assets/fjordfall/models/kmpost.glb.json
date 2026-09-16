@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "7a00b43e716a6a25d0ba3724135ae920986d3c4b9f725df14507375573f48cbc",
+  "recipe": "tools/blender/kmpost.py",
+  "generated": "2026-09-13T06:22:45.377Z",
+  "license": "CC-BY-4.0"
+}

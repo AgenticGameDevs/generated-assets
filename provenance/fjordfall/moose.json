@@ -1,0 +1,11 @@
+[
+  {
+    "name": "moose",
+    "prompt": "A single adult European moose (elk, Alces alces) standing four-square, tall dark brown body with a high shoulder hump, long thin legs, heavy drooping muzzle, a bell of skin under the throat, small antlers in velvet. One animal on its own, no base, no ground plane, no snow.",
+    "negative": "base, pedestal, ground plane, grass, trees, multiple animals, calf, deer, text, person, huge antlers",
+    "polycount": 4000,
+    "symmetry": "on",
+    "refine": true,
+    "texturePrompt": "dark chocolate-brown coarse coat, paler grey-brown legs, black muzzle, matte"
+  }
+]

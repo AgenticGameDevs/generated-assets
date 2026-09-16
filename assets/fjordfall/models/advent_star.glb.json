@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "82b406ad539663fb7135d4987479f4e0655b531837509c4c8f7df41b8dc0c6e8",
+  "recipe": "tools/blender/advent.py",
+  "generated": "2026-09-14T00:53:08.155Z",
+  "license": "CC-BY-4.0"
+}

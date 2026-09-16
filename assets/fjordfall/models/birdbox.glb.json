@@ -1,0 +1,7 @@
+{
+  "source": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up",
+  "originalAssetSha256": "eed3ac034ac5efd2d038184fe0209ac05f3facea3fcaf6a34f3f826e1ab838a9",
+  "recipe": "tools/blender/birdbox.py",
+  "generated": "2026-09-13T10:22:50.149Z",
+  "license": "CC-BY-4.0"
+}

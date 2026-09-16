@@ -1,0 +1,242 @@
+[
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/models/female-rider.glb",
+    "reason": "Reference-image redistribution rights awaiting owner confirmation."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/models/traveller.glb",
+    "reason": "Reference-image redistribution rights awaiting owner confirmation."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/tex/dnt-t.png",
+    "reason": "DNT-branded trail symbol omitted from the generic pack."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/ui/title-fjord.webp",
+    "reason": "No specific generation provenance located."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/bird.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/car_diesel_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/car_ev_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/car_petrol_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/cone.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/contact.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/crash.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/crow.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/fieldfare.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/fly.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/footstep.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/goose.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/grass_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/gravel_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/grit_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/gull.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/insects_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/land.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/land_dirt.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/menu_board.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/menu_detent.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/menu_latch.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/menu_swing.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/ollie.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/owl.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/push.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/rail.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/rain_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/rider_down.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/road_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/sheep.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/shore_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/slide_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/splash.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/summit_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/trees_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/tunnel_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/valley_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/waterfall_hiss_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/waterfall_low_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/wetroad_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/sfx/wind_loop.mp3",
+    "reason": "ElevenLabs Sound Effects standalone redistribution restriction."
+  },
+  {
+    "sourceProject": "skybound",
+    "sourcePath": "src/assets/hero.png; src/player/superman.ts; godot/scripts/hero.gd",
+    "reason": "Hero art and character geometry excluded; no third-party character or reference-image rights established."
+  },
+  {
+    "sourceProject": "fjordfall",
+    "sourcePath": "public/assets/env/kiara_9_dusk_1k.hdr",
+    "reason": "Third-party CC0 photographic environment, not generated for these games; available separately from Poly Haven."
+  }
+]
