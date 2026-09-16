@@ -2,9 +2,9 @@
 
 **An open library and toolkit for organizing, discovering and sharing game assets.** Keep models, textures, artwork, sounds, rigs and animations together with the descriptions, tags, provenance and licenses that make them useful to another developer.
 
-[Browse assets](https://jonathanwmaddison.github.io/generated-assets/) · [Learn to make assets](learn/README.md) · [Organize a collection](learn/ORGANIZE.md) · [Contribute](CONTRIBUTING.md) · [Agent skills and MCP](AGENTS.md)
+[Browse assets](https://agenticgamedevs.github.io/generated-assets/) · [Learn to make assets](learn/README.md) · [Organize a collection](learn/ORGANIZE.md) · [Contribute](CONTRIBUTING.md) · [Agent skills and MCP](AGENTS.md)
 
-This is a shared resource for developers and creators. Collections can come from an artist, a material study, a tool experiment or a game. Authored, procedural and AI-assisted work is welcome. You do not need to work on an existing project or match its art style to contribute.
+This is a shared resource for developers and creators, hosted by [AgenticGameDevs](https://github.com/AgenticGameDevs). Collections can come from an artist, a material study, a tool experiment or a game. Authored, procedural and AI-assisted work is welcome. You do not need to work on an existing project or match its art style to contribute.
 
 ## Find, organize, reuse
 
@@ -24,12 +24,12 @@ Start with one useful contribution: a prop, a material variant, a short sound, a
 
 The [learning hub](learn/README.md) has practical guides for texture sets, reusable 3D props and procedural sound effects. Share the process along with the result: prompts or parameters, export decisions, checks, known limitations, and what someone could change next. Use the [recipe template](learn/RECIPE_TEMPLATE.md) to contribute a guide or short walkthrough.
 
-For questions, ideas and examples of your work, use [Discussions](https://github.com/jonathanwmaddison/generated-assets/discussions). [Community guidance](GOVERNANCE.md) explains review and stewardship.
+For questions, ideas and examples of your work, use [Discussions](https://github.com/AgenticGameDevs/generated-assets/discussions). [Community guidance](GOVERNANCE.md) explains review and stewardship.
 
 ## Work with the repository
 
 ```sh
-git clone https://github.com/jonathanwmaddison/generated-assets.git
+git clone https://github.com/AgenticGameDevs/generated-assets.git
 cd generated-assets
 npm start
 ```

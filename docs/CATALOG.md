@@ -13,7 +13,13 @@ The gallery, CLI and MCP share one generated catalog. No API key, tracking accou
 | `catalog-info.json`                         | Deployment version, schema version and exact Git revision; generated in the site build |
 | `assets/<collection>/<folder>/<slug>.<ext>` | Original downloadable bytes                                                            |
 
-All public resources are relative to `https://jonathanwmaddison.github.io/generated-assets/`. The Pages catalog follows the latest successfully deployed `main`. GitHub's raw URLs at a full commit SHA provide a versioned source. JSON consumers should tolerate new optional fields. There is no write API; contributions use reviewed pull requests.
+All public resources are relative to `https://agenticgamedevs.github.io/generated-assets/`. The Pages catalog follows the latest successfully deployed `main`. GitHub's raw URLs at a full commit SHA provide a versioned source. JSON consumers should tolerate new optional fields. There is no write API; contributions use reviewed pull requests.
+
+### Organization migration (0.3.2)
+
+The repository now lives at `AgenticGameDevs/generated-assets`. Update existing clones with `git remote set-url origin https://github.com/AgenticGameDevs/generated-assets.git`, update bookmarks to the gallery above, and replace installed copies of the portable skills from this repository. Restart a local MCP server after pulling the update.
+
+The updated CLI restores lockfiles from the former personal repository and Pages site by recognizing their exact library URLs and using the new owner. Asset paths, commit pins, byte counts, checksums and attribution are preserved; arbitrary URLs are still rejected. Older installed helpers use the former catalog address and should be updated. Previously published release archives remain historical snapshots. GitHub redirects repository links, but does not redirect the old Pages site.
 
 ## Stable identifiers and source descriptors
 

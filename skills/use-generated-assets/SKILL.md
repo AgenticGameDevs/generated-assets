@@ -5,7 +5,7 @@ description: Find and import reusable models, rigs, animations, textures, artwor
 
 # Use Generated Assets
 
-Use the library at https://jonathanwmaddison.github.io/generated-assets/ . This skill is self-contained and can be copied into an agent's skill directory.
+Use the library at https://agenticgamedevs.github.io/generated-assets/ . This skill is self-contained and can be copied into an agent's skill directory.
 
 If the Generated Assets MCP server is configured, use `search_assets`, then `get_asset` and `get_asset_preview` for candidates. `get_attribution` returns the credits to retain. Otherwise run the included Node 22+ helper:
 
@@ -20,7 +20,7 @@ Resolve `scripts/assets.mjs` relative to this skill's directory. The helper quer
 
 Use `list_packs` and `get_pack` for a small curated starting set; `create_asset_lock` returns a read-only download plan. CLI `lock <comma-separated-IDs> --out <file> --ref <full-commit-SHA>` pins a catalog revision. `restore` requires a new directory, retains credits and rolls back that new directory on failure. Unpinned locks still verify hashes but may fail after the current catalog changes. Never replace a recorded hash just to make an import succeed.
 
-For characters, prefer the complete GLB when the user wants a ready-to-import body. Standalone rigs and animations are mesh-free, target `usage.rigTarget`, and may require retargeting. Read https://jonathanwmaddison.github.io/generated-assets/guide.html for the converter and engine checks; do not promise untested compatibility. The converter runs from a repository checkout after `npm ci`, not from this portable skill alone.
+For characters, prefer the complete GLB when the user wants a ready-to-import body. Standalone rigs and animations are mesh-free, target `usage.rigTarget`, and may require retargeting. Read https://agenticgamedevs.github.io/generated-assets/guide.html for the converter and engine checks; do not promise untested compatibility. The converter runs from a repository checkout after `npm ci`, not from this portable skill alone.
 
 Before choosing a model, check required glTF extensions, rig/animation clips, triangle count, byte size and usage notes. The word “model” does not imply collision geometry or game behavior. Scale and seamless tiling are only verified when explicitly recorded. Preview candidates rather than choosing solely by their generated names.
 

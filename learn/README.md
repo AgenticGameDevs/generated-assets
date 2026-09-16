@@ -29,4 +29,4 @@ Open a focused PR with the Markdown under `learn/`, link any included catalog as
 
 Guides are reviewed for clarity and reproducibility. A published recipe is not a certification of a vendor, a promise about generation costs, or approval of every output. Record what was tested and leave unknowns visible. Keep private receipts, reference material you cannot share, API keys and signed download URLs out of the post.
 
-[Discuss an idea](https://github.com/jonathanwmaddison/generated-assets/discussions) before a large project, or [propose a recipe](https://github.com/jonathanwmaddison/generated-assets/issues/new?template=recipe.yml). No particular game, aesthetic or generator is required.
+[Discuss an idea](https://github.com/AgenticGameDevs/generated-assets/discussions) before a large project, or [propose a recipe](https://github.com/AgenticGameDevs/generated-assets/issues/new?template=recipe.yml). No particular game, aesthetic or generator is required.
