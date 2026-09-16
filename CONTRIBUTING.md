@@ -6,7 +6,7 @@ Bring your own collection, visual style and workflow. You do not need to contrib
 
 ## Start with a small contribution
 
-1. Fork [generated-assets](https://github.com/jonathanwmaddison/generated-assets/fork), clone your fork, and create a branch such as `asset/wooden-crate`.
+1. Fork [generated-assets](https://github.com/AgenticGameDevs/generated-assets/fork), clone your fork, and create a branch such as `asset/wooden-crate`.
 2. Install Node 22+ and run `npm ci`.
 3. Copy `examples/submission.json` outside the repository and replace every example value. The asset ID is `collection/models/slug`, `collection/tex/slug`, `collection/ui/slug`, or `collection/sfx/slug`. Use your own collection name or discuss additions to an existing one. IDs and paths use lowercase letters, numbers, underscores and hyphens.
 4. Import the file and its actual preview:
@@ -54,7 +54,7 @@ Use [learn/RECIPE_TEMPLATE.md](learn/RECIPE_TEMPLATE.md) for a practical walkthr
 
 Add the Markdown under `learn/`, link it from `learn/README.md`, register its HTML page in `scripts/build-docs.mjs`, and add that output to `scripts/build-site.mjs`. Run `npm run build`, `npm run check:links` and `npm run format:check`. Include generated HTML in the PR. Any accompanying assets must pass the usual media checks; a guide-only PR can mark media-specific fields as not applicable. Code/documentation use MIT; media retains its per-file license.
 
-For an idea that needs discussion first, use the [recipe proposal form](https://github.com/jonathanwmaddison/generated-assets/issues/new?template=recipe.yml). Useful subjects include a repeatable texture workflow, an inexpensive procedural sound, export problems you solved, or a carefully checked variant of an existing asset.
+For an idea that needs discussion first, use the [recipe proposal form](https://github.com/AgenticGameDevs/generated-assets/issues/new?template=recipe.yml). Useful subjects include a repeatable texture workflow, an inexpensive procedural sound, export problems you solved, or a carefully checked variant of an existing asset.
 
 ## Automated checks
 
@@ -64,6 +64,6 @@ CI cannot establish copyright ownership, certify artistic quality, detect every 
 
 ## Review and revisions
 
-Use one coherent asset or small related set per PR. Keep stable IDs for compatible revisions; explain geometry, rig, license or scale changes that may break consumers. Do not remove creator credit. Prefer a new asset ID for a materially different replacement. If a source or license is disputed, open an [asset problem report](https://github.com/jonathanwmaddison/generated-assets/issues/new?template=asset-problem.yml).
+Use one coherent asset or small related set per PR. Keep stable IDs for compatible revisions; explain geometry, rig, license or scale changes that may break consumers. Do not remove creator credit. Prefer a new asset ID for a materially different replacement. If a source or license is disputed, open an [asset problem report](https://github.com/AgenticGameDevs/generated-assets/issues/new?template=asset-problem.yml).
 
 Community management and maintainer responsibilities are in [GOVERNANCE.md](GOVERNANCE.md). To consume assets rather than submit them, see [AGENTS.md](AGENTS.md).

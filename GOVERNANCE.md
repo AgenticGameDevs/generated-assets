@@ -23,7 +23,7 @@ Ordinary asset submissions use the review checklist below. New formats, license 
 
 Maintainers merge only after completing this review. CI does not grant merge approval. `CODEOWNERS` requests the initial maintainer's review. As of the 0.3.0 release, `main` requires pull requests, current `validate` and `portability` checks, and resolved review conversations. Force pushes and branch deletion are disabled. The sole repository administrator retains an emergency bypass; no second-person approval is required while there is only one maintainer. Add required independent approval when the maintainer group grows.
 
-Use [Discussions](https://github.com/jonathanwmaddison/generated-assets/discussions) for help, ideas and games made with the assets. Use an issue for a concrete asset defect or proposed change, and a PR for a ready contribution. Private vulnerability reporting is enabled through the repository's Security tab.
+Use [Discussions](https://github.com/AgenticGameDevs/generated-assets/discussions) for help, ideas and games made with the assets. Use an issue for a concrete asset defect or proposed change, and a PR for a ready contribution. Private vulnerability reporting is enabled through the repository's Security tab.
 
 ## Publishing and compatibility
 

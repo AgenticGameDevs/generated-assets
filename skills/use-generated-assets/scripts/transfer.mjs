@@ -1,12 +1,12 @@
 // Shared by the browser, CLI and MCP. No filesystem access or dependencies.
-export const SITE = 'https://jonathanwmaddison.github.io/generated-assets/';
+export const SITE = 'https://agenticgamedevs.github.io/generated-assets/';
 export const MAX_FILES = 40;
 export const MAX_PACK_BYTES = 64 * 1024 * 1024;
 const idPattern = /^[a-z0-9-]+\/(models|rigs|animations|tex|ui|sfx)\/[a-z0-9_-]+$/;
 export function sourceBase(revision) {
   if (revision === null || revision === undefined) return SITE;
   if (!/^[a-f0-9]{40}$/.test(revision)) throw Error('Revision must be a full Git commit SHA.');
-  return `https://raw.githubusercontent.com/jonathanwmaddison/generated-assets/${revision}/`;
+  return `https://raw.githubusercontent.com/AgenticGameDevs/generated-assets/${revision}/`;
 }
 export function validateEntry(a) {
   if (
@@ -66,9 +66,17 @@ export function validateLock(lock) {
   )
     throw Error('Unsupported lockfile');
   const normalized = createLock(lock.assets, lock.revision);
-  for (let i = 0; i < lock.assets.length; i++)
-    if (lock.assets[i].downloadUrl !== normalized.assets[i].downloadUrl)
+  // Migrate only this library's former exact URLs, retaining the revision and hashes.
+  // Fetch from the current owner so old Pages URLs need not remain online.
+  const formerBase =
+    normalized.revision === null
+      ? 'https://jonathanwmaddison.github.io/generated-assets/'
+      : `https://raw.githubusercontent.com/jonathanwmaddison/generated-assets/${normalized.revision}/`;
+  for (let i = 0; i < lock.assets.length; i++) {
+    const url = lock.assets[i].downloadUrl;
+    if (url !== normalized.assets[i].downloadUrl && url !== formerBase + normalized.assets[i].file)
       throw Error('Lockfile download URL is not from the declared library revision');
+  }
   return normalized;
 }
 export async function fetchVerified(a, url = SITE + a.file, fetcher = fetch, signal) {
@@ -106,7 +114,7 @@ export async function fetchVerified(a, url = SITE + a.file, fetcher = fetch, sig
 }
 export function creditsFor(assets) {
   return (
-    'Generated Assets — asset credits\nhttps://github.com/jonathanwmaddison/generated-assets\n\n' +
+    'Generated Assets — asset credits\nhttps://github.com/AgenticGameDevs/generated-assets\n\n' +
     assets
       .map(
         (a) =>

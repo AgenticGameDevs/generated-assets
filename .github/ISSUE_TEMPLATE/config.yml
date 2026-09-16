@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: Help, ideas and showcase
-    url: https://github.com/jonathanwmaddison/generated-assets/discussions
+    url: https://github.com/AgenticGameDevs/generated-assets/discussions
     about: Ask about using assets, suggest improvements or share a game made with the library.
   - name: Report a security vulnerability privately
-    url: https://github.com/jonathanwmaddison/generated-assets/security/advisories/new
+    url: https://github.com/AgenticGameDevs/generated-assets/security/advisories/new
     about: Keep exploitable vulnerabilities and sensitive details out of public issues.

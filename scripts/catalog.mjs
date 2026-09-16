@@ -59,8 +59,8 @@ export async function makeCatalog() {
       provenance: a.source.description,
       ...info,
       licenseUrl: licenseURLs[a.license],
-      downloadUrl: `https://jonathanwmaddison.github.io/generated-assets/${a.file}`,
-      pageUrl: `https://jonathanwmaddison.github.io/generated-assets/?asset=${encodeURIComponent(a.id)}`,
+      downloadUrl: `https://agenticgamedevs.github.io/generated-assets/${a.file}`,
+      pageUrl: `https://agenticgamedevs.github.io/generated-assets/?asset=${encodeURIComponent(a.id)}`,
     });
   }
   for (const file of walk(path.join(root, 'assets'))) {

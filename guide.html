@@ -65,7 +65,7 @@ mixer.clipAction(source.animations.find((c) =&gt; c.name === 'Fjordfall_Walk')).
 <h2>Blender, Godot and other importers</h2>
 <p>Some originals require <code>EXT_meshopt_compression</code>, <code>KHR_mesh_quantization</code> or <code>EXT_texture_webp</code>. Support varies by importer/version. The catalog reports the exact required extensions; an empty list means no required extensions, not a guarantee of artistic or engine compatibility.</p>
 <p>For an importer without those extensions, create a derivative GLB locally:</p>
-<pre><code class="language-sh">git clone https://github.com/jonathanwmaddison/generated-assets.git
+<pre><code class="language-sh">git clone https://github.com/AgenticGameDevs/generated-assets.git
 cd generated-assets
 npm ci
 npm run convert -- fjordfall/models/traveller /path/to/new-traveller.glb
@@ -134,5 +134,5 @@ node skills/use-generated-assets/scripts/assets.mjs restore ./assets.lock.json -
 <li><strong>Pack download fails:</strong> check the message, reduce selection size, or retry later after checking connectivity. No partial ZIP is offered when verification fails.</li>
 <li><strong>Preview unavailable:</strong> the download can still work; check browser WebGL support or open a supported desktop browser.</li>
 </ul>
-<p>Report the asset ID, catalog/release revision, engine/importer version, reproduction steps and an appropriate screenshot in an <a href="https://github.com/jonathanwmaddison/generated-assets/issues/new?template=asset-problem.yml">asset problem report</a>. Keep private game files and personal information out of public reports.</p>
-<p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/docs/GUIDE.md">View or improve this document on GitHub ↗</a></p></article></main></body></html>
+<p>Report the asset ID, catalog/release revision, engine/importer version, reproduction steps and an appropriate screenshot in an <a href="https://github.com/AgenticGameDevs/generated-assets/issues/new?template=asset-problem.yml">asset problem report</a>. Keep private game files and personal information out of public reports.</p>
+<p class="edit-link"><a href="https://github.com/AgenticGameDevs/generated-assets/blob/main/docs/GUIDE.md">View or improve this document on GitHub ↗</a></p></article></main></body></html>

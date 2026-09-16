@@ -43,6 +43,43 @@ test('locks pin library URLs and reject hostile paths, URLs, duplicate IDs and s
     /64 MiB/,
   );
 });
+test('restore migrates former owner URLs without changing pinned revisions, paths or checksums', async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), 'ga-migration-'));
+  try {
+    for (const revision of [null, 'c'.repeat(40)]) {
+      const current = createLock([sample], revision);
+      const legacy = structuredClone(current);
+      const oldBase =
+        revision === null
+          ? 'https://jonathanwmaddison.github.io/generated-assets/'
+          : `https://raw.githubusercontent.com/jonathanwmaddison/generated-assets/${revision}/`;
+      legacy.assets[0].downloadUrl = oldBase + sample.file;
+      assert.deepEqual(validateLock(legacy), current);
+      const destination = path.join(root, revision ?? 'unversioned');
+      await restoreLock(legacy, destination, async (url) => {
+        assert.equal(url, current.assets[0].downloadUrl);
+        return new Response(bytes);
+      });
+      assert.deepEqual(await fs.readFile(path.join(destination, sample.file)), bytes);
+      assert.deepEqual(
+        JSON.parse(await fs.readFile(path.join(destination, 'assets.lock.json'))),
+        current,
+      );
+      for (const url of [
+        oldBase + 'assets/skybound/sfx/other.wav',
+        oldBase + sample.file + '?redirect=elsewhere',
+        legacy.assets[0].downloadUrl.replace('jonathanwmaddison', 'another-owner'),
+        `https://raw.githubusercontent.com/jonathanwmaddison/generated-assets/${'d'.repeat(40)}/${sample.file}`,
+      ]) {
+        const invalid = structuredClone(legacy);
+        invalid.assets[0].downloadUrl = url;
+        assert.throws(() => validateLock(invalid), /declared library revision/);
+      }
+    }
+  } finally {
+    await fs.rm(root, { recursive: true });
+  }
+});
 test('pack collection verifies bytes and includes metadata, usable credits and a pinned lock', async () => {
   const entries = await collectPack([sample], { revision: 'b'.repeat(40), fetcher });
   assert.deepEqual(Buffer.from(entries[sample.file]), bytes);

@@ -57,7 +57,7 @@ Some originals require `EXT_meshopt_compression`, `KHR_mesh_quantization` or `EX
 For an importer without those extensions, create a derivative GLB locally:
 
 ```sh
-git clone https://github.com/jonathanwmaddison/generated-assets.git
+git clone https://github.com/AgenticGameDevs/generated-assets.git
 cd generated-assets
 npm ci
 npm run convert -- fjordfall/models/traveller /path/to/new-traveller.glb
@@ -115,4 +115,4 @@ For an example of these files used in a deployed project, [play Fjordfall](https
 - **Pack download fails:** check the message, reduce selection size, or retry later after checking connectivity. No partial ZIP is offered when verification fails.
 - **Preview unavailable:** the download can still work; check browser WebGL support or open a supported desktop browser.
 
-Report the asset ID, catalog/release revision, engine/importer version, reproduction steps and an appropriate screenshot in an [asset problem report](https://github.com/jonathanwmaddison/generated-assets/issues/new?template=asset-problem.yml). Keep private game files and personal information out of public reports.
+Report the asset ID, catalog/release revision, engine/importer version, reproduction steps and an appropriate screenshot in an [asset problem report](https://github.com/AgenticGameDevs/generated-assets/issues/new?template=asset-problem.yml). Keep private game files and personal information out of public reports.

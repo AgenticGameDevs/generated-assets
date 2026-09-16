@@ -173,7 +173,7 @@ function openAsset(a) {
   $('copy-credit').onclick = () => copy(attributionFor([a]));
   $('copy-link').onclick = () => copy(a.pageUrl);
   $('report').href =
-    'https://github.com/jonathanwmaddison/generated-assets/issues/new?template=asset-problem.yml&title=' +
+    'https://github.com/AgenticGameDevs/generated-assets/issues/new?template=asset-problem.yml&title=' +
     encodeURIComponent('Asset issue: ' + a.id);
   if (!$('detail').open) $('detail').showModal();
   syncURL();
