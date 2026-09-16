@@ -1,0 +1,135 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Use the library — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="workflows.html">Generation workflows</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article><h1>Bring an asset into your game</h1>
+<p>Generated Assets is a community library of reusable models, rigs, animations, textures, artwork and sounds. The initial 172 assets come from Fjordfall and SKYBOUND. <a href="https://fjordfall.fly.dev">Play Fjordfall</a> to see the collection in a deployed game. Its weather, world generation, physics and gameplay are separate from this library.</p>
+<h2>The quickest path</h2>
+<ol>
+<li>Open the <a href="index.html">gallery</a>. The starter packs put the Travellers, humanoid animations, scenery and sounds together. Or search by name, material, action or tags such as <code>rigged</code>, <code>animated</code>, <code>walking</code>, <code>24-joints</code> and <code>transparent</code>.</li>
+<li>Open a preview. Read the description, file size, license, source and limitations. For characters, switch clips, pause, scrub the timeline and show the skeleton. Static models also have a wireframe view. Reduced-motion preferences pause animation initially.</li>
+<li>Download one file, or <strong>Add to pack</strong> and choose <strong>Download ZIP + credits</strong>. Packs contain original files, per-asset metadata, <code>CREDITS.txt</code>, a short README and <code>assets.lock.json</code>. Each file is checked against its SHA-256 before it enters the ZIP. Packs are limited to 40 files and 64 MiB to keep browser memory reasonable.</li>
+<li>Import the asset into your engine. Test at your game's actual scale, lighting, camera distance and frame budget. Create collision, behavior and interaction separately.</li>
+<li>Publish the supplied attribution with your game and note any modifications. Keep the lockfile and metadata in your project so the next developer can trace the source.</li>
+</ol>
+<p>Selection is saved in your browser when storage is available. <strong>Copy share link</strong> opens the same selected IDs for a teammate without an account. It shares the current versions of those IDs; the downloaded lockfile records exact bytes and, on the published site, an immutable Git commit. Clearing selection does not delete downloaded files.</p>
+<h2>Choose the right character download</h2>
+<table>
+<thead>
+<tr>
+<th>You need</th>
+<th>Choose</th>
+<th>What is included</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A usable animated traveller</td>
+<td>Traveller 1 or Traveller 2</td>
+<td>Skinned mesh, textures, 24-joint hierarchy, skin weights and all nine clips</td>
+</tr>
+<tr>
+<td>The rest hierarchy to build around</td>
+<td>Fjordfall humanoid rig</td>
+<td>Nodes and rest transforms; original joint order and inverse binds in <code>extras.assetLibrary</code>; no mesh or skin weights</td>
+</tr>
+<tr>
+<td>Existing motion for the matching rig</td>
+<td>Individual animation or nine-animation pack</td>
+<td>Mesh-free joint hierarchy and original animation channels</td>
+</tr>
+<tr>
+<td>Motion on another character design</td>
+<td>Start with a compatible rig or retarget in your DCC/engine</td>
+<td>Compatibility must be checked; names alone are insufficient</td>
+</tr>
+</tbody>
+</table>
+<p>The nine clips are idle, jog, jump, row, sail, skate cruise, skate push, skate tuck and walk. All four rigged Fjordfall characters carry them; the separate shepherd model is static. The two Travellers are included with confirmed ownership of their reference images and permission to share derivatives, recorded in their metadata.</p>
+<p><code>usage.rigTarget</code> links related assets to <code>fjordfall/rigs/humanoid-24</code>. Preserve bone names, parent hierarchy, rest transforms and inverse-bind conventions. Retargeting requires checking all of them, along with scale and axes. A mesh-free animation GLB is not itself a wearable skin or a universal humanoid rig. Game IK, board attachment, cloth behavior and foot-contact solving are not included.</p>
+<h2>Three.js: load, clone, play</h2>
+<p>The <a href="examples/three-character.html">runnable character example</a> loads one traveller, creates two properly cloned skinned instances, and controls their animation independently. It uses the repository's vendored Three.js and works under <code>npm start</code> without a build tool.</p>
+<pre><code class="language-js">import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+import { clone } from 'three/addons/utils/SkeletonUtils.js';
+import { AnimationMixer } from 'three';
+
+const source = await new GLTFLoader()
+  .setMeshoptDecoder(MeshoptDecoder)
+  .loadAsync('/assets/traveller.glb'); // your downloaded file's actual path
+const character = clone(source.scene);
+scene.add(character);
+const mixer = new AnimationMixer(character);
+mixer.clipAction(source.animations.find((c) =&gt; c.name === 'Fjordfall_Walk')).play();
+// In your frame loop: mixer.update(deltaSeconds).
+// On removal: stopAllAction(), uncacheRoot(character), then release owned resources.
+</code></pre>
+<p>Use <code>SkeletonUtils.clone</code> for a skinned hierarchy. Geometry and materials may still be shared, so dispose them only after their final user is removed. Set the Meshopt decoder before loading compact GLBs; do not strip required extensions. See the official <a href="https://threejs.org/docs/pages/GLTFLoader.html">GLTFLoader documentation</a>, <a href="https://threejs.org/docs/pages/module-SkeletonUtils.html">SkeletonUtils reference</a>, and <a href="https://threejs.org/manual/en/animation-system.html">animation guide</a>.</p>
+<h2>Blender, Godot and other importers</h2>
+<p>Some originals require <code>EXT_meshopt_compression</code>, <code>KHR_mesh_quantization</code> or <code>EXT_texture_webp</code>. Support varies by importer/version. The catalog reports the exact required extensions; an empty list means no required extensions, not a guarantee of artistic or engine compatibility.</p>
+<p>For an importer without those extensions, create a derivative GLB locally:</p>
+<pre><code class="language-sh">git clone https://github.com/jonathanwmaddison/generated-assets.git
+cd generated-assets
+npm ci
+npm run convert -- fjordfall/models/traveller /path/to/new-traveller.glb
+</code></pre>
+<p>The converter decodes Meshopt, dequantizes geometry and converts WebP textures to PNG. It preserves skins, materials and clips without resampling animation. It writes a new GLB plus <code>.asset.json</code> recording the source, derivative checksum and modifications. It refuses to overwrite either output. Other extensions are preserved; inspect them if an importer still rejects the file. The larger output is expected.</p>
+<p>In Blender use <strong>File → Import → glTF 2.0</strong> and inspect the armature and actions. In Godot copy the converted file into your project, let the editor import it, then inspect its Skeleton3D and animation tracks. Use an inherited scene for game behavior so reimporting media does not erase your gameplay edits. For Godot's pipeline see the official <a href="https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html">format guide</a>.</p>
+<h3>What has actually been tested</h3>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browser previews with vendored Three.js</td>
+<td>Character meshes, standalone rigs and animation packs load</td>
+<td>Covered by Chromium tests for representative assets</td>
+</tr>
+<tr>
+<td>Converted Traveller 1 in Blender 5.2.1 LTS</td>
+<td>One armature, 24 bones, nine actions</td>
+<td>Local import check; not a visual approval of every pose</td>
+</tr>
+<tr>
+<td>Converted Traveller 1 in Godot 4.7.1</td>
+<td>24 bones and nine clips</td>
+<td>Local GLTFDocument scene import check</td>
+</tr>
+<tr>
+<td>Khronos glTF Validator</td>
+<td>Decoded collection has no errors</td>
+<td>Required for release; warnings are reported</td>
+</tr>
+<tr>
+<td>Unity / Unreal</td>
+<td>Not tested here</td>
+<td>Use a suitable glTF importer and verify your pipeline</td>
+</tr>
+</tbody>
+</table>
+<p>Checks were run for the 0.3.0 release. Do not infer certification for every engine version or for a contributor's new file. Scale, animation loop seams and root-motion behavior remain unverified unless the individual descriptor states otherwise. The included <code>examples/import-checks/</code> scripts make the Blender/Godot structural checks repeatable.</p>
+<h2>Textures, artwork and audio</h2>
+<p>Textures are color images, not automatically normal, roughness or displacement maps. Set the appropriate color space in your renderer. Check the gallery's repeat view before using an image as a terrain tile; only <code>seamlessVerified: true</code> is an affirmative tiling claim. The <code>-512</code> variants are smaller alternatives. Preserve alpha on illustrated overlays and UI marks.</p>
+<p>Listen to audio at a comfortable volume and test it in your mix. A laser hum is intended to loop; impacts and movement effects are one-shots. Generator terms permitting use inside a game do not necessarily permit standalone redistribution. This library excludes the game's ElevenLabs SFX and includes original procedural sounds with documented licenses instead.</p>
+<h2>Reproducible downloads and agents</h2>
+<p>The <a href="agents.html">agent guide</a> covers the local read-only MCP server and portable skill. The helper requires Node 22+ and has no npm dependencies:</p>
+<pre><code class="language-sh">node skills/use-generated-assets/scripts/assets.mjs search &quot;traveller rigged&quot;
+node skills/use-generated-assets/scripts/assets.mjs info fjordfall/models/traveller
+node skills/use-generated-assets/scripts/assets.mjs download fjordfall/models/traveller --out ./downloads
+node skills/use-generated-assets/scripts/assets.mjs restore ./assets.lock.json --out ./restored-pack
+</code></pre>
+<p>Restore requires a new output directory and verifies every file. It removes only that newly created directory if any download fails. A hash mismatch is a reason to stop and inspect the catalog/source; it is not fixed by accepting changed bytes silently. For a pinned catalog use <code>--ref</code> with a full 40-character Git commit SHA. See <a href="catalog-api.html">the catalog contract</a> for automation and stability.</p>
+<h2>Credits that travel with the game</h2>
+<p>Use each record's attribution and license URL. The pack's <code>CREDITS.txt</code> provides a starting point, including a line to describe modifications. Put credits in a place your game's users can find, such as a credits screen or bundled attribution document. CC0 does not require attribution; preserving source information is still helpful. See <a href="licenses.html">the licenses</a> for the actual grants and third-party notices.</p>
+<h2>When something goes wrong</h2>
+<ul>
+<li><strong>Model missing in the editor:</strong> check required extensions and try the converter. Also check scene scale, object visibility and alpha handling.</li>
+<li><strong>Skeleton loads without a body:</strong> a standalone rig or animation file is intentionally mesh-free. Download the complete character instead.</li>
+<li><strong>Animation twists another character:</strong> stop and compare rest pose, hierarchy and scale; the shared rig ID does not make arbitrary rigs interchangeable.</li>
+<li><strong>Assets missing from a share link:</strong> reset filters. Share links track stable IDs, while lockfiles preserve exact versions.</li>
+<li><strong>Pack download fails:</strong> check the message, reduce selection size, or retry later after checking connectivity. No partial ZIP is offered when verification fails.</li>
+<li><strong>Preview unavailable:</strong> the download can still work; check browser WebGL support or open a supported desktop browser.</li>
+</ul>
+<p>Report the asset ID, catalog/release revision, engine/importer version, reproduction steps and an appropriate screenshot in an <a href="https://github.com/jonathanwmaddison/generated-assets/issues/new?template=asset-problem.yml">asset problem report</a>. Keep private game files and personal information out of public reports.</p>
+<p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/docs/GUIDE.md">View or improve this document on GitHub ↗</a></p></article></main></body></html>

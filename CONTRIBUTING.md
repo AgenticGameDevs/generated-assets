@@ -38,9 +38,17 @@ Rigs use IDs such as `collection/rigs/slug`; animation packs use `collection/ani
 
 The generator does not determine quality. A useful silhouette, consistent scale, clean texture, well-behaved rig, useful metadata and honest limitations matter more than the tool used.
 
-## What CI verifies
+## Write context another developer can use
 
-The `Validate library` workflow validates descriptors, unique IDs/paths, licenses, file bounds, file headers, image dimensions, embedded GLB dependencies, previews, byte counts and SHA-256 hashes. It checks the committed catalog matches the source, tests search/import/download/MCP behavior, and builds the site. Missing metadata and uncatalogued media fail validation.
+Describe what is visibly in the file, its likely role, style and important limitations. For example: “A low-poly painted wooden crate with a separate lid, Y-up orientation and no collision mesh. Scale has not been measured.” Avoid descriptions such as “great game asset” and unverified “production ready” claims. Use lowercase tags for object, material, style and useful actions. Rig/animation/joint-count tags are derived from inspected bytes; they are not a substitute for a rig contract or motion review.
+
+Curated packs live in `packs.json`. A pack groups existing stable IDs with a useful name, description and notes; it does not duplicate binaries or change licenses. Keep packs below 40 assets and 64 MiB, explain why the set belongs together, and validate every reference. A pack-only PR is a useful first contribution.
+
+For tooling and new features, include a user-visible example and tests of the behavior or invariant at risk. Use the [maintenance guide](docs/MAINTAINING.md) for browser/glTF/link/format checks and the [catalog contract](docs/CATALOG.md) for compatibility. Update the relevant guide and changelog when behavior changes. Keep unrelated file formatting out of asset-only PRs.
+
+## Automated checks
+
+The `Validate library` workflow validates descriptors, unique IDs/paths, licenses, file bounds, file headers, image dimensions, embedded GLB dependencies, previews, byte counts and SHA-256 hashes. It checks the committed catalog matches the source, validates curated packs, tests search/import/download/MCP behavior, runs Khronos validation on decoded GLBs, checks documentation links, tests the built gallery in Chromium, and builds the site. Missing metadata and uncatalogued media fail validation. Code formatting uses Prettier; `npm run format` updates maintained source and `npm run format:check` verifies it.
 
 CI cannot establish copyright ownership, certify artistic quality, detect every malicious binary or prove every animation works. Maintainers inspect provenance and previews and may request changes. No PR deployment has write credentials, and fork PRs cannot trigger a production deploy.
 

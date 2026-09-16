@@ -2,13 +2,22 @@
 
 An open asset collection from **Fjordfall** and **SKYBOUND** (the local Superman flight-game prototype). Models, textures, illustrated UI pieces, procedural sound effects, and the workflows behind them.
 
-**[Browse the gallery](https://jonathanwmaddison.github.io/generated-assets/)** · [Asset catalog](catalog.json) · [Contribute](CONTRIBUTING.md) · [Agent skills and MCP](AGENTS.md) · [Workflows](workflows/README.md) · [Licenses](LICENSE.md)
+**[Browse the gallery](https://jonathanwmaddison.github.io/generated-assets/)** · [Start here](docs/GUIDE.md) · [Catalog API](docs/CATALOG.md) · [Contribute](CONTRIBUTING.md) · [Agent skills and MCP](AGENTS.md) · [Workflows](workflows/README.md) · [Licenses](LICENSE.md)
 
 **[Play Fjordfall](https://fjordfall.fly.dev)** for a deployed example of a game made with these assets. Its lighting, weather, world generation and gameplay belong to the game; this library focuses on reusable media and the workflows for contributing it.
 
 The collection contains 172 assets, including four rigged characters, a standalone 24-joint humanoid skeleton, nine individual animation clips and their combined pack. Traveller 1 and Traveller 2 are included with the reference owner's permission. Every asset has a description, searchable tags, provenance, license and verified technical metadata. The gallery supports animation playback and skeleton previews.
 
 ## Use the collection
+
+**New to the library?** Start with the Travellers pack on the gallery homepage. Both models include their rigs and animations. Select other files to build your own pack, share its link, or download a ZIP with credits, source metadata and a checksum lockfile. No account is required. Published ZIP lockfiles pin the deployed Git commit for repeatable downloads.
+
+The [import guide](docs/GUIDE.md) explains character/rig compatibility, Three.js, Blender, Godot, textures, audio and attribution. It includes a [runnable Three.js character example](examples/three-character.html). A converter produces a larger, decoded GLB with PNG textures for importers without Meshopt/WebP support:
+
+```sh
+npm ci
+npm run convert -- fjordfall/models/traveller /path/to/new-traveller.glb
+```
 
 Download individual files through the gallery, clone this repository, or use GitHub's **Code → Download ZIP**. Everything under `assets/` is a real file, not a Git LFS pointer.
 
@@ -45,6 +54,8 @@ Submit additions through a pull request using [CONTRIBUTING.md](CONTRIBUTING.md)
 Agents can use the portable search/download skill or the local, read-only MCP server described in [AGENTS.md](AGENTS.md). Downloads include checksums and attribution. The static gallery is hosted on GitHub Pages; MCP runs locally through stdio.
 
 ## Maintain or regenerate
+
+See [maintenance and release guidance](docs/MAINTAINING.md), the [catalog/versioning contract](docs/CATALOG.md), and the [changelog](CHANGELOG.md). The library has unit/integration tests, browser checks for the built site, decoded Khronos GLB validation, documentation link checks and dependency update proposals.
 
 ```sh
 npm ci                         # needed for validation and regeneration

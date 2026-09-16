@@ -7,8 +7,8 @@ on:
 permissions:
   contents: read
 jobs:
-  validate:
-    runs-on: ubuntu-latest
+  portability:
+    runs-on: windows-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -21,9 +21,34 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run verify
       - run: npm test
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run verify
+      - run: npm test
       - run: npm run build
+      - run: npm run validate:gltf
+      - run: npm run check:links
+      - run: npm run format:check
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
       - name: Check generated files are committed
-        run: git diff --exit-code -- catalog.json schemas/asset.schema.json workflows.html licenses.html contribute.html governance.html agents.html
+        run: git diff --exit-code -- catalog.json schemas/asset.schema.json '*.html'
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-failure-details
+          path: test-results
+          retention-days: 7
       - uses: actions/upload-artifact@v4
         with:
           name: site-preview
@@ -35,7 +60,7 @@ jobs:
           path: dist
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: validate
+    needs: [validate, portability]
     runs-on: ubuntu-latest
     permissions:
       pages: write

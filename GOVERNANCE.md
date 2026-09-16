@@ -21,7 +21,9 @@ Ordinary asset submissions use the review checklist below. New formats, license 
 5. Does `Validate library` pass, and do changes avoid unrelated files or private material?
 6. For code/tooling changes, review execution and file/network behavior. Do not execute an unfamiliar contributed generator just to inspect an asset.
 
-Maintainers merge only after completing this review. CI does not grant merge approval. `CODEOWNERS` requests the initial maintainer's review; enforcement requires GitHub branch rules. Configure `main` to require PRs and the `validate` status check; additional approval requirements become practical as the maintainer group grows. The workflows themselves do not pretend to enforce a review rule that is absent in repository settings.
+Maintainers merge only after completing this review. CI does not grant merge approval. `CODEOWNERS` requests the initial maintainer's review. As of the 0.3.0 release, `main` requires pull requests, current `validate` and `portability` checks, and resolved review conversations. Force pushes and branch deletion are disabled. The sole repository administrator retains an emergency bypass; no second-person approval is required while there is only one maintainer. Add required independent approval when the maintainer group grows.
+
+Use [Discussions](https://github.com/jonathanwmaddison/generated-assets/discussions) for help, ideas and games made with the assets. Use an issue for a concrete asset defect or proposed change, and a PR for a ready contribution. Private vulnerability reporting is enabled through the repository's Security tab.
 
 ## Publishing and compatibility
 

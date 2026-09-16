@@ -1,6 +1,6 @@
 {
   "name": "generated-assets",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,9 +11,33 @@
     "new-asset": "node scripts/add-asset.mjs",
     "export:models": "node scripts/export-models.mjs",
     "catalog": "node scripts/catalog.mjs",
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs",
+    "convert": "node scripts/convert-model.mjs",
+    "validate:gltf": "node scripts/validate-gltf.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "test:browser": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "engines": {"node": ">=22"},
-  "dependencies": {"@modelcontextprotocol/sdk": "1.30.0", "zod": "4.6.5"},
-  "devDependencies": {"three": "0.185.1", "esbuild": "0.25.12", "sharp": "0.35.4", "@gltf-transform/core": "4.5.0", "@gltf-transform/extensions": "4.5.0", "@gltf-transform/functions": "4.5.0", "meshoptimizer": "1.2.0"}
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "4.5.0",
+    "@gltf-transform/extensions": "4.5.0",
+    "@gltf-transform/functions": "4.5.0",
+    "@playwright/test": "1.63.0",
+    "esbuild": "0.25.12",
+    "fflate": "0.8.3",
+    "gltf-validator": "2.0.0-dev.3.10",
+    "markdown-it": "15.0.2",
+    "meshoptimizer": "1.2.0",
+    "prettier": "3.9.6",
+    "sharp": "0.35.4",
+    "three": "0.185.1"
+  }
 }

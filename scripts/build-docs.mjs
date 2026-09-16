@@ -1,14 +1,41 @@
 import fs from 'node:fs';
-const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-const inline=s=>escape(s).replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_,label,url)=>`<a href="${url.replaceAll('"','&quot;').replace(/^\.\.\//,'')}">${label}</a>`).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
-for(const [source,target,title] of [['workflows/README.md','workflows.html','Workflows'],['LICENSE.md','licenses.html','Licenses'],['CONTRIBUTING.md','contribute.html','Contribute'],['GOVERNANCE.md','governance.html','Community'],['AGENTS.md','agents.html','For agents']]){
- const lines=fs.readFileSync(source,'utf8').split('\n');let body='',code=false,list=false;
- for(const line of lines){
-  if(line.startsWith('```')){if(list){body+='</ul>';list=false;}code=!code;body+=code?'<pre><code>':'</code></pre>';continue;}
-  if(code){body+=escape(line)+'\n';continue;}
-  if(/^[-*] |^\d+\. /.test(line)){if(!list){body+='<ul>';list=true;}body+='<li>'+inline(line.replace(/^[-*] |^\d+\. /,''))+'</li>';continue;}
-  if(list){body+='</ul>';list=false;}
-  const heading=line.match(/^(#{1,3}) (.*)$/);body+=heading?`<h${heading[1].length}>${inline(heading[2])}</h${heading[1].length}>`:line?`<p>${inline(line)}</p>`:'';
- }
- fs.writeFileSync(target,`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} — Generated Assets</title><link rel="stylesheet" href="gallery.css"><style>article{max-width:850px;margin:50px auto;padding:0 5vw 60px;line-height:1.85}article h1{font-size:48px}article h2{font:30px Georgia,serif;margin-top:42px}pre{overflow:auto;padding:20px;background:#e8ebe2;border-radius:6px;font-size:12px}code{font-size:12px;overflow-wrap:anywhere}</style></head><body><header><a class="wordmark" href="./">GA<span> / FIELD COLLECTION</span></a><nav><a href="./">Gallery</a><a href="workflows.html">Workflows</a><a href="licenses.html">Licenses</a></nav></header><article>${body}</article></body></html>`);
+import path from 'node:path';
+import MarkdownIt from 'markdown-it';
+const pages = [
+  ['README.md', 'about.html', 'About'],
+  ['workflows/README.md', 'workflows.html', 'Workflows'],
+  ['LICENSE.md', 'licenses.html', 'Licenses'],
+  ['CONTRIBUTING.md', 'contribute.html', 'Contribute'],
+  ['GOVERNANCE.md', 'governance.html', 'Community'],
+  ['AGENTS.md', 'agents.html', 'For agents'],
+  ['docs/GUIDE.md', 'guide.html', 'Use the library'],
+  ['docs/CATALOG.md', 'catalog-api.html', 'Catalog API'],
+  ['docs/MAINTAINING.md', 'maintaining.html', 'Maintain the library'],
+  ['CHANGELOG.md', 'changelog.html', 'Changelog'],
+];
+const destinations = new Map(pages.map(([source, target]) => [source, target]));
+for (const [source, target, title] of pages) {
+  // Raw HTML is disabled; markdown-it also rejects unsafe link protocols.
+  const md = new MarkdownIt({ html: false, linkify: true });
+  const original =
+    md.renderer.rules.link_open ??
+    ((tokens, index, options, env, self) => self.renderToken(tokens, index, options));
+  md.renderer.rules.link_open = (tokens, index, options, env, self) => {
+    const token = tokens[index],
+      href = token.attrGet('href');
+    if (href && !/^(https?:|mailto:|#)/i.test(href)) {
+      const [file, fragment] = href.split('#'),
+        resolved = path.posix.normalize(path.posix.join(path.posix.dirname(source), file));
+      token.attrSet(
+        'href',
+        (destinations.get(resolved) ?? resolved) + (fragment ? '#' + fragment : ''),
+      );
+    }
+    return original(tokens, index, options, env, self);
+  };
+  const body = md.render(fs.readFileSync(source, 'utf8'));
+  fs.writeFileSync(
+    target,
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="workflows.html">Generation workflows</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article>${body}<p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/${source}">View or improve this document on GitHub ↗</a></p></article></main></body></html>`,
+  );
 }

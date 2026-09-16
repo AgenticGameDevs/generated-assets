@@ -20,6 +20,8 @@ These grants cover only rights held by the contributors. They do not grant third
 
 Gallery code, export scripts, generators, workflow documentation, and the packaged skill are licensed under the MIT License in [LICENSE](LICENSE). Third-party files under `vendor/three/` retain the accompanying Three.js MIT license and attribution.
 
+The browser ZIP helper under `vendor/fflate/` retains fflate's MIT license. Other development dependencies retain their own package licenses; they are recorded in the lockfile and are not re-licensed as asset media. Downloaded packs retain each included creator's media license.
+
 ## Generator terms reviewed for this collection
 
 Reviewed 2026-09-16. This records the basis for inclusion, not an unconditional guarantee about every possible use or a substitute for the applicable generation-time agreement.

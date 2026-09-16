@@ -1,0 +1,42 @@
+[
+  {
+    "id": "travellers",
+    "name": "Meet the Travellers",
+    "description": "Both Fjordfall travellers, each with a skinned 24-joint humanoid and nine animation clips. Start here to bring a character into your game.",
+    "assetIds": ["fjordfall/models/traveller", "fjordfall/models/female-rider"],
+    "notes": "Each GLB already contains its animations. Game IK, cloth behavior and collision are not included."
+  },
+  {
+    "id": "humanoid-motion",
+    "name": "A rig and nine movements",
+    "description": "The standalone humanoid hierarchy and full animation pack for idle, walking, jogging, jumping, boats and skating.",
+    "assetIds": ["fjordfall/rigs/humanoid-24", "fjordfall/animations/humanoid-full-pack"],
+    "notes": "Mesh-free files. Use the matching Fjordfall skeleton; other skeletons require retargeting. Root motion and loop seams are not certified."
+  },
+  {
+    "id": "procedural-scenery",
+    "name": "A small procedural landscape",
+    "description": "Pine, snow pine, cactus and boulder models from SKYBOUND, with vertex colors and source geometry generators in the repository.",
+    "assetIds": [
+      "skybound/models/pine",
+      "skybound/models/snow-pine",
+      "skybound/models/cactus",
+      "skybound/models/boulder"
+    ],
+    "notes": "Static scenery. Create colliders and placement rules in your game; source generators are MIT, exported media is CC BY 4.0."
+  },
+  {
+    "id": "synthesized-effects",
+    "name": "Six synthesized effects",
+    "description": "Small original WAV sounds for movement, impacts, destruction and a looping laser hum.",
+    "assetIds": [
+      "skybound/sfx/crumble",
+      "skybound/sfx/explosion",
+      "skybound/sfx/laser-hum",
+      "skybound/sfx/sonic-boom",
+      "skybound/sfx/thud",
+      "skybound/sfx/whoosh"
+    ],
+    "notes": "Mono PCM, 22,050 Hz. The laser hum is a loop; the others are one-shots. Preview volume and mix for your game."
+  }
+]
