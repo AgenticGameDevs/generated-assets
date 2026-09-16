@@ -1,6 +1,8 @@
-# Contribute an asset
+# Contribute assets and know-how
 
 Anyone can propose an asset, improve metadata, report a problem, or help review. Contributions arrive through pull requests; a maintainer reviews rights and quality before merging. There is no anonymous upload endpoint and no automatic approval.
+
+Bring your own collection, visual style and workflow. You do not need to contribute to an existing game or use a particular generator. A single useful file, a thoughtful metadata correction or a reproducible guide is a good first PR. See the [learning hub](learn/README.md) for creation guides and [collection organization](learn/ORGANIZE.md) for naming and structure.
 
 ## Start with a small contribution
 
@@ -25,9 +27,9 @@ For images and sounds, omit `--preview`; model previews are required. The import
 
 ## What we accept
 
-For a working game example, [play Fjordfall](https://fjordfall.fly.dev). Keep contributions focused on reusable assets, rigs, animations and their generation workflows; weather engines and world generation systems are outside the current scope.
+Keep contributions focused on reusable assets, rigs, animations and their organization, generation and reuse workflows. Collections can be organized around a creator, material, style or purpose; they do not have to originate in a game.
 
-Rigs use IDs such as `collection/rigs/slug`; animation packs use `collection/animations/slug`. Both require a real thumbnail and `usage.rigTarget`. Include the joint hierarchy and rest pose, name animation clips, state units and root-motion behavior where verified, and explain retargeting requirements. Mesh-free skeletons and clips are supported. The Fjordfall clips target its 24-joint humanoid rig; matching names alone does not establish compatibility with another rig. Tags such as `rigged`, `animated`, joint count and clip count are derived from file inspection; add descriptive action and style tags as well.
+Rigs use IDs such as `collection/rigs/slug`; animation packs use `collection/animations/slug`. Both require a real thumbnail and `usage.rigTarget`. Include the joint hierarchy and rest pose, name animation clips, state units and root-motion behavior where verified, and explain retargeting requirements. Mesh-free skeletons and clips are supported. Two skeletons may share bone names and still need retargeting because their hierarchy, rest pose or scale differs. Tags such as `rigged`, `animated`, joint count and clip count are derived from file inspection; add descriptive action and style tags as well.
 
 - **Open licenses:** CC0 1.0 or CC BY 4.0 for media. Original tooling uses MIT. You keep ownership; contributing grants users the selected license. There is no ownership transfer or separate CLA. Do not upload work you cannot license, or change someone else's license.
 - **Models:** self-contained GLB 2.0, embedded textures, meaningful object orientation, no external file dependencies. Describe required extensions and game-specific limitations. Rigged characters should have useful, named clips and be checked in motion.
@@ -45,6 +47,14 @@ Describe what is visibly in the file, its likely role, style and important limit
 Curated packs live in `packs.json`. A pack groups existing stable IDs with a useful name, description and notes; it does not duplicate binaries or change licenses. Keep packs below 40 assets and 64 MiB, explain why the set belongs together, and validate every reference. A pack-only PR is a useful first contribution.
 
 For tooling and new features, include a user-visible example and tests of the behavior or invariant at risk. Use the [maintenance guide](docs/MAINTAINING.md) for browser/glTF/link/format checks and the [catalog contract](docs/CATALOG.md) for compatibility. Update the relevant guide and changelog when behavior changes. Keep unrelated file formatting out of asset-only PRs.
+
+## Contribute a guide or recipe
+
+Use [learn/RECIPE_TEMPLATE.md](learn/RECIPE_TEMPLATE.md) for a practical walkthrough. Explain the intended result, inputs, tools, prompts or parameters, cleanup/export, what you tested and what remains uncertain. Credit the author and sources. Label illustrative prompts clearly rather than implying they generated a pictured asset.
+
+Add the Markdown under `learn/`, link it from `learn/README.md`, register its HTML page in `scripts/build-docs.mjs`, and add that output to `scripts/build-site.mjs`. Run `npm run build`, `npm run check:links` and `npm run format:check`. Include generated HTML in the PR. Any accompanying assets must pass the usual media checks; a guide-only PR can mark media-specific fields as not applicable. Code/documentation use MIT; media retains its per-file license.
+
+For an idea that needs discussion first, use the [recipe proposal form](https://github.com/jonathanwmaddison/generated-assets/issues/new?template=recipe.yml). Useful subjects include a repeatable texture workflow, an inexpensive procedural sound, export problems you solved, or a carefully checked variant of an existing asset.
 
 ## Automated checks
 

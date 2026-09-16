@@ -1,8 +1,8 @@
 [
   {
     "id": "travellers",
-    "name": "Meet the Travellers",
-    "description": "Both Fjordfall travellers, each with a skinned 24-joint humanoid and nine animation clips. Start here to bring a character into your game.",
+    "name": "Animated humanoids",
+    "description": "Two stylized characters, each with a skinned 24-joint humanoid and nine animation clips. A starting point for character integration.",
     "assetIds": ["fjordfall/models/traveller", "fjordfall/models/female-rider"],
     "notes": "Each GLB already contains its animations. Game IK, cloth behavior and collision are not included."
   },
@@ -16,7 +16,7 @@
   {
     "id": "procedural-scenery",
     "name": "A small procedural landscape",
-    "description": "Pine, snow pine, cactus and boulder models from SKYBOUND, with vertex colors and source geometry generators in the repository.",
+    "description": "Pine, snow pine, cactus and boulder models with vertex colors. Source geometry generators are included for making variations.",
     "assetIds": [
       "skybound/models/pine",
       "skybound/models/snow-pine",

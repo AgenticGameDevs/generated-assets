@@ -11,7 +11,7 @@ import { createLock } from '../skills/use-generated-assets/scripts/transfer.mjs'
 const root = fileURLToPath(new URL('../', import.meta.url));
 export function createServer() {
   const assets = JSON.parse(fs.readFileSync(path.join(root, 'catalog.json')));
-  const server = new McpServer({ name: 'generated-assets', version: '0.3.0' });
+  const server = new McpServer({ name: 'generated-assets', version: '0.3.1' });
   const packs = JSON.parse(fs.readFileSync(path.join(root, 'packs.json')));
   const annotations = {
     readOnlyHint: true,
