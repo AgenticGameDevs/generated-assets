@@ -12,6 +12,12 @@ const pages = [
   ['docs/CATALOG.md', 'catalog-api.html', 'Catalog API'],
   ['docs/MAINTAINING.md', 'maintaining.html', 'Maintain the library'],
   ['CHANGELOG.md', 'changelog.html', 'Changelog'],
+  ['learn/README.md', 'learn.html', 'Learn and contribute'],
+  ['learn/ORGANIZE.md', 'organizing.html', 'Organize an asset library'],
+  ['learn/TEXTURES.md', 'texture-guide.html', 'Build a texture set'],
+  ['learn/MODELS.md', 'model-guide.html', 'Make a reusable prop'],
+  ['learn/SOUNDS.md', 'sound-guide.html', 'Make a sound effect'],
+  ['learn/RECIPE_TEMPLATE.md', 'recipe-template.html', 'Share a recipe'],
 ];
 const destinations = new Map(pages.map(([source, target]) => [source, target]));
 for (const [source, target, title] of pages) {
@@ -36,6 +42,6 @@ for (const [source, target, title] of pages) {
   const body = md.render(fs.readFileSync(source, 'utf8'));
   fs.writeFileSync(
     target,
-    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="workflows.html">Generation workflows</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article>${body}<p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/${source}">View or improve this document on GitHub ↗</a></p></article></main></body></html>`,
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="learn.html">Learn</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="organizing.html">Organizing assets</a><a href="learn.html">Learn to create</a><a href="workflows.html">Workflow case studies</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article>${body}<p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/${source}">View or improve this document on GitHub ↗</a></p></article></main></body></html>`,
   );
 }

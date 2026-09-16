@@ -1,0 +1,22 @@
+name: Asset recipe or guide idea
+description: Propose a practical guide, generation recipe or documented experiment that can help grow the library.
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What could someone make or learn?
+      description: Describe a small useful result and who it helps. No particular game or generator is required.
+    validations:
+      required: true
+  - type: textarea
+    id: process
+    attributes:
+      label: Tools, inputs and current evidence
+      description: What have you tried, what can be shared, and what remains unverified? Link public examples if you have them.
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Possible contribution
+      description: A guide, runnable recipe, asset, metadata improvement or useful variation. Keep private files and credentials out of this issue.

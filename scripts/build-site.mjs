@@ -51,6 +51,14 @@ for (const file of [
   'docs',
   'CHANGELOG.md',
   'SECURITY.md',
+  'learn',
+  'learn.css',
+  'learn.html',
+  'organizing.html',
+  'texture-guide.html',
+  'model-guide.html',
+  'sound-guide.html',
+  'recipe-template.html',
 ])
   fs.cpSync(file, path.join(target, file), { recursive: true });
 fs.mkdirSync(path.join(target, 'lib'));

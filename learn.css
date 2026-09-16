@@ -1,0 +1,105 @@
+.library-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 0 0 28px;
+  padding: 22px 0;
+  border-top: 1px solid #ccd3c8;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #536759;
+}
+.library-context p {
+  margin: 0;
+}
+.library-context strong {
+  display: block;
+  color: #25352f;
+}
+.starter-section {
+  margin-top: 50px;
+}
+.learn-section {
+  border-top: 1px solid #ccd3c8;
+  padding: 36px 0 50px;
+}
+.learn-section > h2 {
+  font:
+    32px Georgia,
+    serif;
+}
+.learn-section > p:not(.eyebrow) {
+  max-width: 700px;
+  line-height: 1.7;
+  color: #536759;
+}
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin: 26px 0;
+}
+.learning-grid article {
+  border: 1px solid #d1d8cd;
+  border-radius: 6px;
+  padding: 22px;
+  background: #faf9f5;
+}
+.learning-grid h3 {
+  font:
+    23px/1.25 Georgia,
+    serif;
+  margin: 16px 0;
+}
+.learning-grid p:not(.eyebrow) {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #536759;
+}
+.community-invite {
+  padding: 22px 0;
+  max-width: 760px;
+}
+.community-invite h3 {
+  font:
+    25px Georgia,
+    serif;
+  margin: 0;
+}
+.community-invite p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #536759;
+}
+.community-invite a {
+  display: inline-block;
+  margin: 10px 24px 0 0;
+  font-size: 13px;
+}
+.intro {
+  padding: 32px 0 28px;
+}
+h1 {
+  font-size: clamp(42px, 5vw, 60px);
+}
+.hero-actions {
+  flex-wrap: wrap;
+}
+@media (max-width: 650px) {
+  .library-context {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+  .learning-grid article {
+    padding: 20px;
+  }
+  .intro {
+    padding-top: 24px;
+  }
+  .hero-actions {
+    gap: 18px;
+  }
+}

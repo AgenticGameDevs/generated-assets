@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+- Refocused the homepage and repository around organizing, discovering, sharing and contributing assets, with the original games retained as provenance and worked examples.
+- Added a learning hub with collection organization, texture, 3D prop and procedural audio guides, plus a runnable sound recipe and community walkthrough template.
+- Added recipe proposals and guide contribution instructions; moved curated packs below the catalog and described them by use.
+
 ## 0.3.0
 
 - Curated starter packs make the Travellers, humanoid motion, procedural scenery and sounds easy to find.

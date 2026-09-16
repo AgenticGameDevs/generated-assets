@@ -21,4 +21,4 @@ Asset IDs and a short description of the new files or changes:
 - [ ] `npm run build`, `npm test`, and `npm run verify` pass.
 - [ ] Generated catalog changes and accurate creator credits are included.
 
-For tooling-only PRs, mark media-specific fields as not applicable and explain the behavior tested.
+For tooling or guide-only PRs, mark media-specific fields as not applicable and explain the behavior or recipe checked. New guides should use the learning template, credit sources and distinguish tested results from illustrative examples.

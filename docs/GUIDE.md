@@ -1,10 +1,10 @@
 # Bring an asset into your game
 
-Generated Assets is a community library of reusable models, rigs, animations, textures, artwork and sounds. The initial 172 assets come from Fjordfall and SKYBOUND. [Play Fjordfall](https://fjordfall.fly.dev) to see the collection in a deployed game. Its weather, world generation, physics and gameplay are separate from this library.
+Generated Assets is an open library and toolkit for organizing and reusing models, rigs, animations, textures, artwork and sounds. Browse the catalog, collect useful files into a pack, and keep the context needed to use them in another project. To add your own work, start with [the learning hub](../learn/README.md) and [collection organization](../learn/ORGANIZE.md).
 
 ## The quickest path
 
-1. Open the [gallery](../index.html). The starter packs put the Travellers, humanoid animations, scenery and sounds together. Or search by name, material, action or tags such as `rigged`, `animated`, `walking`, `24-joints` and `transparent`.
+1. Open the [gallery](../index.html). Search by name, material, action or tags such as `rigged`, `animated`, `walking`, `24-joints` and `transparent`. Filter by type, collection, license and size, or use a curated pack for a small related set.
 2. Open a preview. Read the description, file size, license, source and limitations. For characters, switch clips, pause, scrub the timeline and show the skeleton. Static models also have a wireframe view. Reduced-motion preferences pause animation initially.
 3. Download one file, or **Add to pack** and choose **Download ZIP + credits**. Packs contain original files, per-asset metadata, `CREDITS.txt`, a short README and `assets.lock.json`. Each file is checked against its SHA-256 before it enters the ZIP. Packs are limited to 40 files and 64 MiB to keep browser memory reasonable.
 4. Import the asset into your engine. Test at your game's actual scale, lighting, camera distance and frame budget. Create collision, behavior and interaction separately.
@@ -13,6 +13,8 @@ Generated Assets is a community library of reusable models, rigs, animations, te
 Selection is saved in your browser when storage is available. **Copy share link** opens the same selected IDs for a teammate without an account. It shares the current versions of those IDs; the downloaded lockfile records exact bytes and, on the published site, an immutable Git commit. Clearing selection does not delete downloaded files.
 
 ## Choose the right character download
+
+The following existing character family is a worked example of complete models versus standalone rigs and motion. Other contributors can add different skeletons and styles with their own compatibility contracts.
 
 | You need                             | Choose                                                     | What is included                                                                                                    |
 | ------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -99,6 +101,10 @@ Restore requires a new output directory and verifies every file. It removes only
 ## Credits that travel with the game
 
 Use each record's attribution and license URL. The pack's `CREDITS.txt` provides a starting point, including a line to describe modifications. Put credits in a place your game's users can find, such as a credits screen or bundled attribution document. CC0 does not require attribution; preserving source information is still helpful. See [the licenses](../LICENSE.md) for the actual grants and third-party notices.
+
+## An example in use
+
+For an example of these files used in a deployed project, [play Fjordfall](https://fjordfall.fly.dev). Its rendering and gameplay show one application of the library; use the assets and workflows in your own project as their licenses permit.
 
 ## When something goes wrong
 

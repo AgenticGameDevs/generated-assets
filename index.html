@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="An open community library of game models, textures, illustrations and sounds. Preview, download, contribute, or discover assets through MCP and agent skills."
+      content="An open library and toolkit for organizing, discovering and sharing game assets. Browse reusable files, contribute your work, and learn how to make more."
     />
-    <title>Generated Assets — Open game asset library</title>
+    <title>Generated Assets — Organize and share game assets</title>
     <link rel="stylesheet" href="gallery.css" />
     <link rel="stylesheet" href="library.css" />
     <link rel="stylesheet" href="packs.css" />
+    <link rel="stylesheet" href="learn.css" />
   </head>
   <body>
     <a class="skip-link" href="#collection">Skip to assets</a>
@@ -20,7 +21,7 @@
         <a href="guide.html">Start here</a>
         <a href="contribute.html">Contribute</a
         ><a href="agents.html">For agents</a
-        ><a href="workflows.html">Workflows</a
+        ><a href="learn.html">Learn</a
         ><a href="https://github.com/jonathanwmaddison/generated-assets"
           >GitHub ↗</a
         >
@@ -28,25 +29,21 @@
     </header>
     <main>
       <section class="intro">
-        <p class="eyebrow">OPEN ASSETS. SHARED CRAFT.</p>
-        <h1>Build on what<br /><em>we make together.</em></h1>
+        <p class="eyebrow">AN OPEN ASSET LIBRARY & TOOLKIT</p>
+        <h1>A shared home<br /><em>for game assets.</em></h1>
         <p class="lede">
-          Game-ready starting points, with the source and credit attached. Find
-          a character, a quiet texture, or a new sound—and contribute something
-          of your own.
+          Organize models, textures, sounds, rigs and animations with the context
+          that makes them reusable. Find what you need, put a pack together,
+          or add your own work to the library.
         </p>
         <div class="hero-actions">
-          <a class="download" href="#collection">Explore the library ↓</a
-          ><a href="contribute.html">Share an asset →</a>
+          <a class="download" href="#collection">Browse assets ↓</a
+          ><a href="contribute.html">Contribute an asset →</a>
+          <a href="learn.html">Learn how to make one →</a>
         </div>
         <div class="summary" id="summary">Opening the collection…</div>
       </section>
-      <section class="starter-section" aria-labelledby="packs-heading">
-        <p class="eyebrow">A GOOD PLACE TO START</p>
-        <h2 id="packs-heading">Small packs. Real starting points.</h2>
-        <p>Meet the Travellers, try their shared rig, or pick a few pieces for your world. Packs include credits and exact file checksums.</p>
-        <div id="starter-packs" class="pack-grid"></div>
-      </section>
+      <div class="library-context"><p><strong>Keep the useful context.</strong> Every asset has a description, tags, provenance, license and checksum.</p><p><strong>Make it easy to find again.</strong> Use collections, filters and shared packs to organize related files. <a href="organizing.html">How organization works →</a></p></div>
       <section id="collection" aria-label="Asset collection">
         <div class="toolbar">
           <label class="search"
@@ -107,15 +104,22 @@
         </p>
         <button id="more" class="more" hidden>Load more assets</button>
       </section>
-      <section class="process">
-        <p class="eyebrow">TAKE THE PROCESS, TOO</p>
-        <h2>Prompts are only the beginning.</h2>
-        <p>
-          Explore the image recipes, model export workflow, procedural audio
-          generators, and a reusable agent skill. Every published asset has a
-          source, a license, and a checksum.
-        </p>
-        <a href="workflows.html">Explore the workflows →</a>
+      <section class="starter-section" aria-labelledby="packs-heading">
+        <p class="eyebrow">REUSE FILES TOGETHER</p>
+        <h2 id="packs-heading">Start with a pack. Make it your own.</h2>
+        <p>Small sets grouped by use, with credits and exact file checksums. Add individual assets to make a selection you can share.</p>
+        <div id="starter-packs" class="pack-grid"></div>
+      </section>
+      <section class="learn-section" aria-labelledby="learn-heading">
+        <p class="eyebrow">GROW THE LIBRARY, SHARE THE PROCESS</p>
+        <h2 id="learn-heading">Make something another developer can use.</h2>
+        <p>Practical guides for creating assets, keeping them organized and preparing a useful contribution. Authored, procedural and AI-assisted workflows are welcome.</p>
+        <div class="learning-grid">
+          <article><p class="eyebrow">TEXTURES</p><h3><a href="texture-guide.html">Build a consistent texture set</a></h3><p>Write a material brief, check repeated tiles and package useful variants.</p></article>
+          <article><p class="eyebrow">3D MODELS</p><h3><a href="model-guide.html">Turn a concept into a reusable prop</a></h3><p>Plan the silhouette, inspect the mesh and export a model with clear limitations.</p></article>
+          <article><p class="eyebrow">AUDIO</p><h3><a href="sound-guide.html">Make a small sound effect from code</a></h3><p>Try a runnable synthesis recipe, then make and document your own variation.</p></article>
+        </div>
+        <div class="community-invite"><h3>Your first contribution can be small.</h3><p>A useful prop, a texture variant, better tags or an explained recipe all help. You keep creator credit; maintainers review the contribution before it joins the library.</p><a href="contribute.html">Make a contribution →</a> <a href="learn.html">Read or contribute a guide →</a></div>
       </section>
     </main>
     <aside id="selection-bar" aria-label="Your asset pack" hidden>
@@ -128,9 +132,8 @@
       <input id="share-link" aria-label="Shareable pack link" readonly hidden />
     </aside>
     <footer>
-      An open community library, founded with assets from
-      <a href="https://fjordfall.fly.dev">Fjordfall — play the game ↗</a> and
-      SKYBOUND. <a href="licenses.html">Licenses</a> ·
+      An open home for reusable game assets and the knowledge behind them.
+      <a href="about.html">About the library</a> · <a href="learn.html">Learn</a> · <a href="licenses.html">Licenses</a> ·
       <a href="governance.html">Community & review</a> ·
       <a href="excluded.json">Excluded assets</a> ·
       <a href="catalog.json">JSON catalog</a>

@@ -1,46 +1,39 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="workflows.html">Generation workflows</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article><h1>Generated Assets</h1>
-<p>An open asset collection from <strong>Fjordfall</strong> and <strong>SKYBOUND</strong> (the local Superman flight-game prototype). Models, textures, illustrated UI pieces, procedural sound effects, and the workflows behind them.</p>
-<p><strong><a href="https://jonathanwmaddison.github.io/generated-assets/">Browse the gallery</a></strong> · <a href="guide.html">Start here</a> · <a href="catalog-api.html">Catalog API</a> · <a href="contribute.html">Contribute</a> · <a href="agents.html">Agent skills and MCP</a> · <a href="workflows.html">Workflows</a> · <a href="licenses.html">Licenses</a></p>
-<p><strong><a href="https://fjordfall.fly.dev">Play Fjordfall</a></strong> for a deployed example of a game made with these assets. Its lighting, weather, world generation and gameplay belong to the game; this library focuses on reusable media and the workflows for contributing it.</p>
-<p>The collection contains 172 assets, including four rigged characters, a standalone 24-joint humanoid skeleton, nine individual animation clips and their combined pack. Traveller 1 and Traveller 2 are included with the reference owner's permission. Every asset has a description, searchable tags, provenance, license and verified technical metadata. The gallery supports animation playback and skeleton previews.</p>
-<h2>Use the collection</h2>
-<p><strong>New to the library?</strong> Start with the Travellers pack on the gallery homepage. Both models include their rigs and animations. Select other files to build your own pack, share its link, or download a ZIP with credits, source metadata and a checksum lockfile. No account is required. Published ZIP lockfiles pin the deployed Git commit for repeatable downloads.</p>
-<p>The <a href="guide.html">import guide</a> explains character/rig compatibility, Three.js, Blender, Godot, textures, audio and attribution. It includes a <a href="examples/three-character.html">runnable Three.js character example</a>. A converter produces a larger, decoded GLB with PNG textures for importers without Meshopt/WebP support:</p>
-<pre><code class="language-sh">npm ci
-npm run convert -- fjordfall/models/traveller /path/to/new-traveller.glb
-</code></pre>
-<p>Download individual files through the gallery, clone this repository, or use GitHub's <strong>Code → Download ZIP</strong>. Everything under <code>assets/</code> is a real file, not a Git LFS pointer.</p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="learn.html">Learn</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="organizing.html">Organizing assets</a><a href="learn.html">Learn to create</a><a href="workflows.html">Workflow case studies</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article><h1>Generated Assets</h1>
+<p><strong>An open library and toolkit for organizing, discovering and sharing game assets.</strong> Keep models, textures, artwork, sounds, rigs and animations together with the descriptions, tags, provenance and licenses that make them useful to another developer.</p>
+<p><a href="https://jonathanwmaddison.github.io/generated-assets/">Browse assets</a> · <a href="learn.html">Learn to make assets</a> · <a href="organizing.html">Organize a collection</a> · <a href="contribute.html">Contribute</a> · <a href="agents.html">Agent skills and MCP</a></p>
+<p>This is a shared resource for developers and creators. Collections can come from an artist, a material study, a tool experiment or a game. Authored, procedural and AI-assisted work is welcome. You do not need to work on an existing project or match its art style to contribute.</p>
+<h2>Find, organize, reuse</h2>
+<ul>
+<li><strong>Find the right file.</strong> Search descriptions and tags; filter by type, collection, license, animation and size. Preview models, textures and sounds before choosing them.</li>
+<li><strong>Keep context attached.</strong> Every asset has an individual descriptor, creator credit, source information, technical details and a checksum. Stable IDs make assets easy to reference from tools and projects.</li>
+<li><strong>Organize useful sets.</strong> Collections give assets a lasting home. Curated packs group existing IDs for a use case; your own selection can mix collections without duplicating source files.</li>
+<li><strong>Share reproducible downloads.</strong> Export a ZIP with files, metadata, credits and a lockfile pinned to the deployed commit. Share a selection link with a teammate or restore a lockfile through the CLI.</li>
+<li><strong>Use it from your tools.</strong> The JSON catalog, portable agent skill and local read-only MCP server expose the same assets. <a href="catalog-api.html">Integration contract</a>.</li>
+</ul>
+<p>The <a href="guide.html">usage guide</a> covers engine imports, animation compatibility, textures, audio and attribution. It includes a runnable Three.js example and a GLB converter for importers without Meshopt/WebP support. Read each file's limitations; available animation or a successful import does not establish scale, collision or gameplay behavior.</p>
+<h2>Help grow the library</h2>
+<p>Start with one useful contribution: a prop, a material variant, a short sound, an animation, better metadata, or a recipe that another creator can follow. Create your own collection when the work needs one. You keep creator credit; maintainers review rights, metadata and quality through pull requests.</p>
+<p><a href="contribute.html">Make your first contribution</a> or use the <a href="skills/contribute-game-assets/SKILL.md">contribution skill</a>. A focused submission is easier to review and improve than an unexplained folder of outputs.</p>
+<p>The <a href="learn.html">learning hub</a> has practical guides for texture sets, reusable 3D props and procedural sound effects. Share the process along with the result: prompts or parameters, export decisions, checks, known limitations, and what someone could change next. Use the <a href="recipe-template.html">recipe template</a> to contribute a guide or short walkthrough.</p>
+<p>For questions, ideas and examples of your work, use <a href="https://github.com/jonathanwmaddison/generated-assets/discussions">Discussions</a>. <a href="governance.html">Community guidance</a> explains review and stewardship.</p>
+<h2>Work with the repository</h2>
 <pre><code class="language-sh">git clone https://github.com/jonathanwmaddison/generated-assets.git
 cd generated-assets
 npm start
 </code></pre>
-<p>Open <a href="http://127.0.0.1:4178">http://127.0.0.1:4178</a>. Serving the gallery needs only Node 22+, with no install step. Its Three.js viewer is vendored for offline use. The gallery also works as a static site on GitHub Pages.</p>
-<p>Models are GLB/glTF 2.0. Some Fjordfall models require <code>EXT_meshopt_compression</code>, <code>KHR_mesh_quantization</code>, or <code>EXT_texture_webp</code>; use a compatible loader or convert them for your engine. Embedded images and vertex colors stay with each GLB. Game-specific wind shaders, collision, IK and behavior are not baked into these files. Character GLBs retain their authored animation clips.</p>
-<p>Textures are WebP or PNG. The <code>-512</code> files are smaller mobile variants. An image intended to tile is not a guarantee of a perfectly invisible seam. The preview provides neutral lighting rather than reproducing either game's rendering.</p>
-<h2>Licenses and attribution</h2>
-<p>Most media is <strong>CC BY 4.0</strong>. The original flock-bell recording retains its <strong>CC0</strong> dedication. Generator and gallery code is <strong>MIT</strong>; vendored Three.js keeps its own MIT notice. Per-file media licenses are in <code>catalog.json</code> and the gallery. Descriptors under <code>metadata/</code> are authoritative; <code>manifest.json</code> is a legacy export inventory.</p>
-<p>Suggested attribution: “Assets by Jonathan Maddison, Generated Assets (CC BY 4.0). Meshy-generated models created with Meshy.” Link to this repository, retain the license link, and note your modifications. The Meshy credit is retained because historical account tiers were not independently verified; it also satisfies the attribution requirement for free-plan generations.</p>
-<h2>What is included</h2>
-<ul>
-<li>Fjordfall: buildings, vegetation, wildlife, boats, furniture, road props, reusable characters, generated surface textures, illustrated marks, and original synthesized bells.</li>
-<li>SKYBOUND: four exported procedural scenery models, six exported synthesized effects, and the source geometry/audio generators.</li>
-<li>Historical image/model prompts where available, sanitized provenance, SHA-256 checksums, and a reusable agent skill.</li>
-</ul>
-<p>ElevenLabs-generated sound files are <strong>excluded</strong>: their standalone redistribution restriction is incompatible with an asset library. Hero-specific artwork and files without sufficient provenance are listed in <a href="excluded.json">excluded.json</a>. Game databases, user pictures, email hashes and private save data are not part of this repository.</p>
-<h2>Contribute and discover</h2>
-<p>Submit additions through a pull request using <a href="contribute.html">CONTRIBUTING.md</a> or the <a href="skills/contribute-game-assets/SKILL.md">contribution skill</a>. CI validates metadata, media and generated files before deployment; maintainers review rights and quality. <a href="governance.html">GOVERNANCE.md</a> describes community responsibilities and decisions.</p>
-<p>Agents can use the portable search/download skill or the local, read-only MCP server described in <a href="agents.html">AGENTS.md</a>. Downloads include checksums and attribution. The static gallery is hosted on GitHub Pages; MCP runs locally through stdio.</p>
-<h2>Maintain or regenerate</h2>
-<p>See <a href="maintaining.html">maintenance and release guidance</a>, the <a href="catalog-api.html">catalog/versioning contract</a>, and the <a href="changelog.html">changelog</a>. The library has unit/integration tests, browser checks for the built site, decoded Khronos GLB validation, documentation link checks and dependency update proposals.</p>
-<pre><code class="language-sh">npm ci                         # needed for validation and regeneration
-npm run export:models
-# Godot 4.x is needed for sound regeneration:
-godot --headless --path generators/skybound/godot --editor --import --quit
-godot --headless --path generators/skybound/godot --script export.gd
-npm run catalog
+<p>Open <a href="http://127.0.0.1:4178">http://127.0.0.1:4178</a>. Browsing locally requires Node 22+; the viewer and ZIP helper are vendored. Install dependencies for imports, conversion, validation and MCP:</p>
+<pre><code class="language-sh">npm ci
 npm run build
 npm test
 npm run verify
 </code></pre>
-<p>The reusable skill lives in <a href="skills/game-asset-pipeline/SKILL.md"><code>skills/game-asset-pipeline</code></a>. Point your agent at it in this checkout so its relative links to workflows and recipes resolve. It describes the practices used in these projects; it is newly packaged for this release, not a claim that a historical skill ran every generation.</p>
+<p>Source media lives in <code>assets/</code>; editable descriptors live in <code>metadata/</code>; rendered previews live in <code>thumbnails/</code>. <code>catalog.json</code> is generated from those sources, and <code>packs.json</code> references existing IDs. <a href="organizing.html">Organization guide</a>.</p>
+<p>The public catalog and portable download tools target this community repository. You can keep a local clone and use its structure for your work, but a separate branded deployment needs its own repository/URL configuration; the current tooling is not a one-click private hosting service.</p>
+<h2>Licenses and provenance</h2>
+<p>Media uses the open license in each asset's record: currently CC BY 4.0 or CC0. Keep the supplied attribution and note modifications. Code and documentation are MIT; vendored dependencies retain their own notices. See <a href="licenses.html">LICENSE.md</a> for details and the founding collection's generator provenance.</p>
+<p>Source method is recorded per asset. Tool choice does not establish quality or redistribution rights. Contributors must be able to share both the output and any included third-party material under the stated license. Unresolved files stay outside the public catalog; historic exclusions are recorded in <a href="excluded.json">excluded.json</a>.</p>
+<h2>Origins and examples</h2>
+<p>The initial collection was contributed from Fjordfall and SKYBOUND. They are examples of assets used in real projects, not requirements for new collections. <a href="https://fjordfall.fly.dev">Play Fjordfall</a> for a deployed game made with some of these files, or read the <a href="workflows.html">founding collection's workflow notes</a>.</p>
+<h2>Maintain and extend</h2>
+<p>See the <a href="maintaining.html">maintenance guide</a>, <a href="catalog-api.html">catalog API and versioning</a>, <a href="changelog.html">changelog</a>, and <a href="SECURITY.md">security reporting</a>. Pull requests run metadata, checksum, unit, browser, format, link and glTF checks, with separate Windows tooling verification. The gallery deploys after required checks pass.</p>
 <p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/README.md">View or improve this document on GitHub ↗</a></p></article></main></body></html>

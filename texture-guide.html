@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build a texture set — Generated Assets</title><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="docs.css"></head><body><header><a class="wordmark" href="./">GA<span> / OPEN ASSET LIBRARY</span></a><nav><a href="./">Gallery</a><a href="guide.html">Start here</a><a href="learn.html">Learn</a><a href="contribute.html">Contribute</a><a href="agents.html">For agents</a></nav></header><main class="documentation"><aside aria-label="Documentation"><a href="guide.html">Using assets</a><a href="catalog-api.html">Catalog API</a><a href="organizing.html">Organizing assets</a><a href="learn.html">Learn to create</a><a href="workflows.html">Workflow case studies</a><a href="contribute.html">Contributing</a><a href="governance.html">Community</a><a href="maintaining.html">Maintaining</a><a href="licenses.html">Licenses</a><a href="changelog.html">Changelog</a></aside><article><h1>Build a consistent texture set</h1>
+<p><strong>Goal:</strong> make two or three related color textures that another developer can use together. Start with one material, prove the workflow, then make variants. This is an illustrative workflow; the example prompt below is not a historical recipe for a catalog asset.</p>
+<h2>Write the material brief first</h2>
+<p>Decide the material, visual style, apparent feature size, target use, dimensions, transparency and byte budget. “Old wood” leaves most decisions open. “Muted painted timber boards for a stylized building, with restrained grain and no strong directional lighting” gives both a creator and a reviewer something to evaluate.</p>
+<p>For a small exercise, choose dry timber, worn painted timber and a darker weathered variant. Keep board width, grain scale, palette range and contrast consistent. Use filenames and IDs that explain the difference. If the image is intended to tile, include that intent in the brief without claiming it already passes.</p>
+<h2>An example generation prompt</h2>
+<pre><code class="language-text">One square color texture of muted blue painted timber boards for a stylized game.
+Straight-on orthographic view; board widths stay consistent across the image.
+Restrained grain and small patches of worn paint; low contrast at a distance.
+Even lighting, with no cast shadows, highlights, perspective, text or framing.
+Designed to repeat in both directions, without a single prominent landmark.
+Output an opaque color image; do not draw a material sphere or a preview scene.
+</code></pre>
+<p>Use this as a brief, not a guarantee. If working by hand, apply the same constraints while painting. If using a generator, keep the actual prompt, tool/model identifier, available seed or settings, and source/reference rights. Keep the lossless master before resizing or compression.</p>
+<h2>Check the result where it will be used</h2>
+<p>View a repeated grid and inspect every boundary. Look for a continuous edge but also for obvious repeated knots, stains and alternating bands. A technically matching border can still look repetitive. Repair the master, repeat the view, and record what you checked.</p>
+<p>Put the image on a flat surface in a simple scene. Check apparent detail size from both near and far away, under lighting that differs from the generation preview. A color texture should not be treated as a ready-made normal or roughness map. Build and check those maps separately if you need them.</p>
+<p>Export a useful full-size version and, if it helps a real use case, a smaller variant. Inspect both after compression. PNG and WebP are accepted by this library; preserve alpha when the asset needs it. Disk size is not the same as runtime texture memory. The target engine's import and compression settings still matter; see <a href="https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_images.html">Godot's image-import guide</a> for one engine's tradeoffs.</p>
+<h2>Package the context</h2>
+<ul>
+<li>Describe the material, style and variant without subjective quality claims.</li>
+<li>Tag material and use, such as <code>wood</code>, <code>painted</code>, <code>stylized</code> and <code>surface</code>.</li>
+<li>Record whether tiling was checked in <code>usage.seamlessVerified</code>; leave it false or absent if unverified.</li>
+<li>State any visible limits, such as repeating features or baked lighting you could not remove.</li>
+<li>Include the actual tool/source method and a recipe when sharing rights permit it.</li>
+</ul>
+<p>The gallery's <strong>Repeat texture</strong> preview helps reviewers inspect your exported image. Submit one material first using <a href="contribute.html">the contribution flow</a>, then propose a coherent pack as the set grows. A useful follow-up is a lower-resolution variant with a clear use case, not dozens of nearly identical outputs.</p>
+<p class="edit-link"><a href="https://github.com/jonathanwmaddison/generated-assets/blob/main/learn/TEXTURES.md">View or improve this document on GitHub ↗</a></p></article></main></body></html>

@@ -1,6 +1,6 @@
-# How the collection was made
+# Workflow case studies from the founding collections
 
-The collection combines AI generation with authored Blender meshes and procedural synthesis. “Generated” does not mean every file came from a generative model. The catalog distinguishes these sources.
+These notes document the initial contributed collections: AI generation, authored Blender meshes and procedural synthesis. They preserve provenance and examples rather than prescribing a game, aesthetic or tool for future contributions. For practical creation and organization guides, start with [the learning hub](../learn/README.md).
 
 See these assets in use in [the deployed Fjordfall game](https://fjordfall.fly.dev).
 
@@ -32,7 +32,7 @@ For newly generated models, establish rights to any supplied reference images se
 
 ## Reusing rigs and animation
 
-Both Travellers are included: the owner confirmed rights to their character reference sheets and authorized sharing the resulting models. All four Fjordfall characters include a 24-joint rig and nine clips. Use the complete character GLB for the most direct import.
+Both Travellers are included: the owner confirmed rights to their character reference sheets and authorized sharing the resulting models. All four rigged Fjordfall characters include a 24-joint rig and nine clips; the shepherd is static. Use the complete character GLB for the most direct import.
 
 The `fjordfall/rigs/humanoid-24` asset provides the mesh-free hierarchy and rest pose. Its GLB extras retain the original inverse-bind matrices and joint order. The animation collection provides individual clips and one combined pack targeting that hierarchy. These files contain no skin weights or character mesh; retargeting to another skeleton requires checking names, hierarchy, rest pose and scale in your engine. Root motion and loop seams are not independently certified.
 
@@ -48,7 +48,7 @@ The gallery uses the Three.js practices applied during extraction: retain vertex
 
 The two Fjordfall bell clips are original additive synthesis. Church bells combine damped inharmonic partials and previous-strike tails to make a loop. Flock bells combine a fixed strike score with partial ratios and decay envelopes; that recording was already dedicated to CC0.
 
-SKYBOUND generates sounds using noise, oscillators and biquad filters. The reusable Web Audio class is in `generators/skybound/audio.ts`. The Godot source and deterministic WAV exporter are in `generators/skybound/godot/`. Run the commands in the root README to reproduce the six effects; listen for clipping, cut tails and bad loop joins. WAV files are mono PCM at 22,050 Hz; the laser file is a loop, the others are one-shots.
+SKYBOUND generates sounds using noise, oscillators and biquad filters. The reusable Web Audio class is in `generators/skybound/audio.ts`. The Godot source and deterministic WAV exporter are in `generators/skybound/godot/`. From the repository root, run `godot --headless --path generators/skybound/godot --editor --import --quit`, then `godot --headless --path generators/skybound/godot --script export.gd` to reproduce the six effects. Listen for clipping, cut tails and bad loop joins. WAV files are mono PCM at 22,050 Hz; the laser file is a loop, the others are one-shots.
 
 ElevenLabs clips from the game are deliberately absent: a license to include a sound in a game is not necessarily a license to redistribute the standalone sample in a library.
 
