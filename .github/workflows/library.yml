@@ -43,13 +43,13 @@ jobs:
       - run: npm run test:browser
       - name: Check generated files are committed
         run: git diff --exit-code -- catalog.json schemas/asset.schema.json '*.html'
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: browser-failure-details
           path: test-results
           retention-days: 7
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: site-preview
           path: dist
