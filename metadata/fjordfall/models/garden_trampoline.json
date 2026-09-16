@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/garden_trampoline",
+  "name": "Garden Trampoline",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Props",
+  "description": "Garden Trampoline, a stylized environment prop from Fjordfall’s Norwegian landscape. Authored in Blender with simple game-scale forms. Game collision and interactive behavior are separate.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "props",
+    "garden",
+    "trampoline",
+    "stylized"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Garden Trampoline by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/models/garden_trampoline.glb",
+  "preview": "thumbnails/fjordfall-garden_trampoline.glb.png",
+  "source": {
+    "method": "authored",
+    "generator": "Blender",
+    "description": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/sankthans_lantern",
+  "name": "Sankthans Lantern",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Props",
+  "description": "Sankthans Lantern, a stylized environment prop from Fjordfall’s Norwegian landscape. Authored in Blender with simple game-scale forms. Game collision and interactive behavior are separate.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "props",
+    "sankthans",
+    "lantern",
+    "stylized"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Sankthans Lantern by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/models/sankthans_lantern.glb",
+  "preview": "thumbnails/fjordfall-sankthans_lantern.glb.png",
+  "source": {
+    "method": "authored",
+    "generator": "Blender",
+    "description": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

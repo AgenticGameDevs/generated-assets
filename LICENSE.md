@@ -4,13 +4,13 @@ Copyright © 2026 Jonathan Maddison, to the extent copyright subsists in the con
 
 ## Artwork and audio
 
-Except where `manifest.json` states otherwise, media under `assets/`, preview thumbnails, and original prompt recipes under `provenance/` are licensed under the **Creative Commons Attribution 4.0 International License**:
+Except where `catalog.json` states otherwise, media under `assets/`, preview thumbnails, and original prompt recipes under `provenance/` are licensed under the **Creative Commons Attribution 4.0 International License**:
 
 https://creativecommons.org/licenses/by/4.0/
 
 Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 
-You may share and adapt this material, including commercially, subject to attribution and the other license terms. Credit Jonathan Maddison and this repository. Meshy-derived assets additionally retain the credit “Model created with Meshy — CC BY 4.0.” Their source descriptions identify Meshy where known; for the original Meshy-based rider rig, the credit also applies to derived character bodies.
+You may share and adapt this material, including commercially, subject to attribution and the other license terms. Credit the creator named in each asset's catalog record and this repository; Jonathan Maddison created the founding collection. Meshy-derived assets additionally retain the credit “Model created with Meshy — CC BY 4.0.” Their source descriptions identify Meshy where known; for the original Meshy-based rider rig, the credit also applies to derived character bodies.
 
 `assets/fjordfall/sfx/flock_bells.mp3` retains its existing **CC0 1.0 Universal** dedication: https://creativecommons.org/publicdomain/zero/1.0/legalcode .
 

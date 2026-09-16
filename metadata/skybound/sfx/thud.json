@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "skybound/sfx/thud",
+  "name": "Thud",
+  "kind": "sound",
+  "collection": "skybound",
+  "category": "Sound effects",
+  "description": "Synthesized impact with a falling-pitch sine body and short filtered-noise transient.",
+  "tags": [
+    "sound",
+    "skybound",
+    "sound-effects",
+    "thud"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Thud by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/skybound/sfx/thud.wav",
+  "source": {
+    "method": "procedural",
+    "generator": "Godot / Web Audio synthesis",
+    "description": "Original Godot synthesis, fixed seed 20260916, exported as PCM WAV; no external samples."
+  },
+  "usage": {
+    "notes": [
+      "No external samples; synthesized source."
+    ]
+  }
+}

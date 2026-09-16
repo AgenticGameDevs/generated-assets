@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/ui/place-fall",
+  "name": "Place Fall",
+  "kind": "artwork",
+  "collection": "fjordfall",
+  "category": "UI & illustration",
+  "description": "Illustrated fall place icon for maps and field guides. A raster UI asset rather than a model or live interface.",
+  "tags": [
+    "artwork",
+    "fjordfall",
+    "ui-illustration",
+    "place",
+    "fall"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Place Fall by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/ui/place-fall.webp",
+  "source": {
+    "method": "ai-generated",
+    "generator": "OpenAI image generation",
+    "description": "OpenAI-generated; recorded model: gpt-image-2.5-sunburst-2026-09-08"
+  },
+  "usage": {
+    "notes": [
+      "Use as an image asset; interface behavior is not included."
+    ]
+  }
+}

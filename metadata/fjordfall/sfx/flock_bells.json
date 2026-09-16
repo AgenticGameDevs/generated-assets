@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/sfx/flock_bells",
+  "name": "Flock Bells",
+  "kind": "sound",
+  "collection": "fjordfall",
+  "category": "Sound effects",
+  "description": "Original scored sheep-bell recording synthesized from damped partials. No external samples; retains its existing CC0 dedication.",
+  "tags": [
+    "sound",
+    "fjordfall",
+    "sound-effects",
+    "flock",
+    "bells"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC0-1.0",
+  "attribution": "Flock Bells by Jonathan Maddison, Generated Assets (CC0-1.0).",
+  "file": "assets/fjordfall/sfx/flock_bells.mp3",
+  "source": {
+    "method": "procedural",
+    "generator": "Additive synthesis",
+    "description": "Original additive synthesis without external samples; tools/gen/flock-bells.ts"
+  },
+  "usage": {
+    "notes": [
+      "No external samples; synthesized source."
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "skybound/models/cactus",
+  "name": "Cactus",
+  "kind": "model",
+  "collection": "skybound",
+  "category": "Vegetation",
+  "description": "Stylized three-branch cactus assembled from low-sided cylindrical sections, with green vertex colors.",
+  "tags": [
+    "model",
+    "skybound",
+    "vegetation",
+    "cactus",
+    "stylized",
+    "nature"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Cactus by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/skybound/models/cactus.glb",
+  "preview": "thumbnails/skybound-cactus.glb.png",
+  "source": {
+    "method": "procedural",
+    "generator": "Three.js procedural geometry",
+    "description": "Original procedural geometry exported without changing the shapes."
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

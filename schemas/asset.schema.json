@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+\\/(models|rigs|animations|tex|ui|sfx)\\/[a-z0-9_-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "model",
+        "rig",
+        "animation",
+        "texture",
+        "artwork",
+        "sound"
+      ]
+    },
+    "collection": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "category": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 1500
+    },
+    "tags": {
+      "minItems": 1,
+      "maxItems": 30,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      }
+    },
+    "creator": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "url": {
+          "type": "string",
+          "format": "starts_with",
+          "pattern": "^https:\\/\\/.*"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ],
+      "additionalProperties": false
+    },
+    "license": {
+      "type": "string",
+      "enum": [
+        "CC0-1.0",
+        "CC-BY-4.0"
+      ]
+    },
+    "attribution": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 600
+    },
+    "file": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]+(?:\\/[a-zA-Z0-9_.-]+)+$"
+    },
+    "preview": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]+(?:\\/[a-zA-Z0-9_.-]+)+$"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "ai-generated",
+            "procedural",
+            "authored",
+            "mixed"
+          ]
+        },
+        "generator": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 150
+        },
+        "description": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 2000
+        },
+        "referenceRights": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 600
+        }
+      },
+      "required": [
+        "method",
+        "generator",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "units": {
+          "type": "string",
+          "enum": [
+            "metres",
+            "unspecified"
+          ]
+        },
+        "upAxis": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "Z"
+          ]
+        },
+        "scaleVerified": {
+          "type": "boolean"
+        },
+        "seamlessVerified": {
+          "type": "boolean"
+        },
+        "rigTarget": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 120
+        },
+        "rootMotion": {
+          "type": "string",
+          "enum": [
+            "in-place",
+            "root-motion",
+            "mixed",
+            "unspecified"
+          ]
+        },
+        "notes": {
+          "maxItems": 12,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        }
+      },
+      "required": [
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "kind",
+    "collection",
+    "category",
+    "description",
+    "tags",
+    "creator",
+    "license",
+    "attribution",
+    "file",
+    "source",
+    "usage"
+  ],
+  "additionalProperties": false
+}

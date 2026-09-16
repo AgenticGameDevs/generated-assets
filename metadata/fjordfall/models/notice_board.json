@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/notice_board",
+  "name": "Notice Board",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Boats & vehicles",
+  "description": "Notice Board, a stylized boats & vehicles asset from Fjordfall’s Norwegian landscape. Authored in Blender with simple game-scale forms. Game collision and interactive behavior are separate.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "boats-vehicles",
+    "notice",
+    "board",
+    "stylized"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Notice Board by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/models/notice_board.glb",
+  "preview": "thumbnails/fjordfall-notice_board.glb.png",
+  "source": {
+    "method": "authored",
+    "generator": "Blender",
+    "description": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

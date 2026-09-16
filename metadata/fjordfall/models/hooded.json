@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/hooded",
+  "name": "Hooded traveller",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Characters",
+  "description": "Legacy hooded traveller body bound to the shared Fjordfall rider skeleton, with the same nine authored animation clips. Useful as a compatible character variant.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "characters",
+    "hooded",
+    "stylized",
+    "character",
+    "animated"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Hooded traveller by Jonathan Maddison, Generated Assets (CC-BY-4.0). Model created with Meshy.",
+  "file": "assets/fjordfall/models/hooded.glb",
+  "preview": "thumbnails/fjordfall-hooded.glb.png",
+  "source": {
+    "method": "mixed",
+    "generator": "Meshy + Blender",
+    "description": "Original Blender body; preserved rider-before-blender rig; nine unchanged shipped rider actions"
+  },
+  "usage": {
+    "notes": [
+      "Authored clips included; game IK, foot contact solving and cloth shaders are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false,
+    "rigTarget": "fjordfall/rigs/humanoid-24",
+    "rootMotion": "unspecified"
+  }
+}

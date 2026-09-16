@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/ui/marks-atlas",
+  "name": "Marks Atlas",
+  "kind": "artwork",
+  "collection": "fjordfall",
+  "category": "UI & illustration",
+  "description": "Marks Atlas: an illustrated game interface asset from Fjordfall.",
+  "tags": [
+    "artwork",
+    "fjordfall",
+    "ui-illustration",
+    "marks",
+    "atlas"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Marks Atlas by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/ui/marks-atlas.webp",
+  "source": {
+    "method": "ai-generated",
+    "generator": "OpenAI image generation",
+    "description": "Atlas assembled from included OpenAI-generated mark images"
+  },
+  "usage": {
+    "notes": [
+      "Use as an image asset; interface behavior is not included."
+    ]
+  }
+}

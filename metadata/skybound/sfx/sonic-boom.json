@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "skybound/sfx/sonic-boom",
+  "name": "Sonic Boom",
+  "kind": "sound",
+  "collection": "skybound",
+  "category": "Sound effects",
+  "description": "Synthesized low-frequency sonic boom with a brief high-frequency noise transient. A mono one-shot exported from SKYBOUND.",
+  "tags": [
+    "sound",
+    "skybound",
+    "sound-effects",
+    "sonic",
+    "boom"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Sonic Boom by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/skybound/sfx/sonic-boom.wav",
+  "source": {
+    "method": "procedural",
+    "generator": "Godot / Web Audio synthesis",
+    "description": "Original Godot synthesis, fixed seed 20260916, exported as PCM WAV; no external samples."
+  },
+  "usage": {
+    "notes": [
+      "No external samples; synthesized source."
+    ]
+  }
+}

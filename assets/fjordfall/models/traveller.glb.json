@@ -1,0 +1,17 @@
+{
+  "source": "Meshy image-to-3D from an authored T-pose reference; bound to the preserved rider rig in Blender",
+  "recipe": "tools/blender/traveller.py",
+  "animations": [
+    "Fjordfall_Idle",
+    "Fjordfall_Jog",
+    "Fjordfall_Jump",
+    "Fjordfall_Row",
+    "Fjordfall_Sail",
+    "Fjordfall_SkateCruise",
+    "Fjordfall_SkatePush",
+    "Fjordfall_SkateTuck",
+    "Fjordfall_Walk"
+  ],
+  "referenceRights": "Jonathan Maddison confirmed ownership of the Traveller reference images and authorized inclusion on 2026-09-16.",
+  "license": "CC-BY-4.0"
+}

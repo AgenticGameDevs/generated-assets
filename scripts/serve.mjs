@@ -11,4 +11,4 @@ http.createServer((req,res)=>{
  if(!fs.existsSync(target)){res.writeHead(404).end();return;}
  res.setHeader('Content-Type',types[path.extname(target)]??'application/octet-stream');
  fs.createReadStream(target).pipe(res);
-}).listen(4178,'127.0.0.1',()=>console.log('Gallery: http://127.0.0.1:4178'));
+}).listen(Number(process.env.PORT??4178),'127.0.0.1',()=>console.log(`Gallery: http://127.0.0.1:${process.env.PORT??4178}`));

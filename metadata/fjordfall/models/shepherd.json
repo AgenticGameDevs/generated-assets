@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/shepherd",
+  "name": "Shepherd",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Characters",
+  "description": "Older Norwegian sheep farmer with a walking staff, knitted sweater, work trousers, boots and flat cap. A standing environment character.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "characters",
+    "shepherd",
+    "stylized",
+    "character",
+    "animated"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Shepherd by Jonathan Maddison, Generated Assets (CC-BY-4.0). Model created with Meshy.",
+  "file": "assets/fjordfall/models/shepherd.glb",
+  "preview": "thumbnails/fjordfall-shepherd.glb.png",
+  "source": {
+    "method": "ai-generated",
+    "generator": "Meshy",
+    "description": "Meshy text-to-3d"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included.",
+      "Authored clips included; game IK, foot contact solving and cloth shaders are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

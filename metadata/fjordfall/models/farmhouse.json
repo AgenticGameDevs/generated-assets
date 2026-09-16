@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/farmhouse",
+  "name": "Farmhouse",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Buildings",
+  "description": "White Norwegian farmhouse with a pitched roof, windows and chimney. A textured building for rural settlements and roadside scenes.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "buildings",
+    "farmhouse",
+    "stylized"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Farmhouse by Jonathan Maddison, Generated Assets (CC-BY-4.0). Model created with Meshy.",
+  "file": "assets/fjordfall/models/farmhouse.glb",
+  "preview": "thumbnails/fjordfall-farmhouse.glb.png",
+  "source": {
+    "method": "ai-generated",
+    "generator": "Meshy",
+    "description": "Meshy-generated model; project asset manifest and credits"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

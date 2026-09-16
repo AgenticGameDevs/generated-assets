@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/seterbu",
+  "name": "Mountain pasture cabin",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Buildings",
+  "description": "Small dark-timber mountain pasture cabin with a turf roof. A rustic building for upland settlements.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "buildings",
+    "seterbu",
+    "stylized"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Mountain pasture cabin by Jonathan Maddison, Generated Assets (CC-BY-4.0). Model created with Meshy.",
+  "file": "assets/fjordfall/models/seterbu.glb",
+  "preview": "thumbnails/fjordfall-seterbu.glb.png",
+  "source": {
+    "method": "ai-generated",
+    "generator": "Meshy",
+    "description": "Meshy-generated model; project asset manifest and credits"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

@@ -1,0 +1,27 @@
+name: Asset problem or rights concern
+description: Report a broken asset, inaccurate metadata, missing credit or redistribution concern.
+body:
+  - type: input
+    id: asset
+    attributes:
+      label: Asset ID or gallery link
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Problem
+      options:
+        - Technical or visual quality
+        - Metadata or attribution
+        - License or reference rights
+        - Broken download or preview
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details and evidence
+      description: Include reproduction steps or public source links. Do not post private information or credentials.
+    validations:
+      required: true

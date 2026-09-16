@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/tex/asphalt-512",
+  "name": "Asphalt 512",
+  "kind": "texture",
+  "collection": "fjordfall",
+  "category": "Surface materials",
+  "description": "Flat-lit asphalt albedo detail for road surfaces. Road markings are supplied by the consuming game, not painted into this texture. This is the 512-pixel mobile variant.",
+  "tags": [
+    "texture",
+    "fjordfall",
+    "surface-materials",
+    "asphalt"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Asphalt 512 by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/tex/asphalt-512.webp",
+  "source": {
+    "method": "ai-generated",
+    "generator": "OpenAI image generation",
+    "description": "OpenAI-generated; project asset manifest; phone variants resized from full-size images"
+  },
+  "usage": {
+    "notes": [
+      "Inspect seams and color response in your target engine."
+    ],
+    "seamlessVerified": false
+  }
+}

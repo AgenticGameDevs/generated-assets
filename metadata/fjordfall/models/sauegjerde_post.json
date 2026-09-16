@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/sauegjerde_post",
+  "name": "Sauegjerde Post",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Props",
+  "description": "Sauegjerde Post, a stylized environment prop from Fjordfall’s Norwegian landscape. Authored in Blender with simple game-scale forms. Game collision and interactive behavior are separate.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "props",
+    "sauegjerde",
+    "post",
+    "stylized"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Sauegjerde Post by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/models/sauegjerde_post.glb",
+  "preview": "thumbnails/fjordfall-sauegjerde_post.glb.png",
+  "source": {
+    "method": "authored",
+    "generator": "Blender",
+    "description": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

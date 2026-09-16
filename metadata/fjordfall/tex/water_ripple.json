@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/tex/water_ripple",
+  "name": "Water Ripple",
+  "kind": "texture",
+  "collection": "fjordfall",
+  "category": "Surface materials",
+  "description": "Generated water ripple color detail retained from Fjordfall’s earlier image workflow.",
+  "tags": [
+    "texture",
+    "fjordfall",
+    "surface-materials",
+    "water",
+    "ripple"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Water Ripple by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/tex/water_ripple.webp",
+  "source": {
+    "method": "ai-generated",
+    "generator": "OpenAI image generation",
+    "description": "OpenAI-generated; project asset manifest; phone variants resized from full-size images"
+  },
+  "usage": {
+    "notes": [
+      "Inspect seams and color response in your target engine."
+    ],
+    "seamlessVerified": false
+  }
+}

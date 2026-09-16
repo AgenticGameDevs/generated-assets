@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/ui/mark-cows",
+  "name": "Mark Cows",
+  "kind": "artwork",
+  "collection": "fjordfall",
+  "category": "UI & illustration",
+  "description": "Illustrated cows journey mark from Fjordfall’s field-guide interface. A small raster emblem for badges, journals and discovery lists.",
+  "tags": [
+    "artwork",
+    "fjordfall",
+    "ui-illustration",
+    "mark",
+    "cows"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Mark Cows by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/ui/mark-cows.webp",
+  "source": {
+    "method": "ai-generated",
+    "generator": "OpenAI image generation",
+    "description": "OpenAI-generated; recorded model: gpt-image-2.5-sunburst-2026-09-08"
+  },
+  "usage": {
+    "notes": [
+      "Use as an image asset; interface behavior is not included."
+    ]
+  }
+}

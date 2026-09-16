@@ -1521,6 +1521,24 @@
       "sha256": "a9f3e4b382a023c6982f205d207e804c70c3624d8c096ad631a72b0bc1effb93",
       "license": "CC-BY-4.0",
       "provenance": "Original generation recipes; informational, no API calls."
+    },
+    {
+      "path": "assets/fjordfall/models/traveller.glb",
+      "sourceProject": "fjordfall",
+      "sourcePath": "public/assets/models/traveller.glb",
+      "bytes": 514440,
+      "sha256": "788578c8cce6006703c83614304c20e785273a2ddd50789404065f4298b786d5",
+      "license": "CC-BY-4.0",
+      "provenance": "Meshy image-to-3D from an authored T-pose reference; bound to the preserved rider rig in Blender"
+    },
+    {
+      "path": "assets/fjordfall/models/female-rider.glb",
+      "sourceProject": "fjordfall",
+      "sourcePath": "public/assets/models/female-rider.glb",
+      "bytes": 1763580,
+      "sha256": "fc8ea2485be02f0fac21ac5d85c6c8af3a5e93bbf2c611ce99c63c83cbfd33d4",
+      "license": "CC-BY-4.0",
+      "provenance": "Meshy image-to-3D from an authored T-pose reference; bound to the preserved rider rig in Blender"
     }
   ]
 }

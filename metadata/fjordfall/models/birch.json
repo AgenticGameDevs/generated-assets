@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/birch",
+  "name": "Birch",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Vegetation",
+  "description": "Birch, a stylized vegetation model from Fjordfall’s Norwegian landscape. Includes the source model’s embedded surface appearance. Game collision and interactive behavior are separate.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "vegetation",
+    "birch",
+    "stylized",
+    "nature"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Birch by Jonathan Maddison, Generated Assets (CC-BY-4.0). Model created with Meshy.",
+  "file": "assets/fjordfall/models/birch.glb",
+  "preview": "thumbnails/fjordfall-birch.glb.png",
+  "source": {
+    "method": "ai-generated",
+    "generator": "Meshy",
+    "description": "Meshy-generated model; project asset manifest and credits"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

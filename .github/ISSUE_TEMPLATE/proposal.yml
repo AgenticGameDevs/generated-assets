@@ -1,0 +1,10 @@
+name: Collection or workflow proposal
+description: Discuss a new asset pack, format, integration or community policy.
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Explain who it helps, the scope, source/license if relevant, and any compatibility impact.
+    validations:
+      required: true

@@ -1,14 +1,24 @@
 import fs from 'node:fs';
-import crypto from 'node:crypto';
-const manifest=JSON.parse(fs.readFileSync('manifest.json'));
-const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-for(const folder of ['models','sfx'])for(const name of fs.readdirSync(`assets/skybound/${folder}`)){
- const path=`assets/skybound/${folder}/${name}`,b=fs.readFileSync(path);
- const row={path,sourceProject:'skybound',sourcePath:folder==='models'?'src/world/props.ts':'godot/scripts/sfx.gd',bytes:b.length,sha256:hash(b),license:'CC-BY-4.0',provenance:folder==='models'?'Original procedural geometry exported without changing the shapes.':'Original Godot synthesis, fixed seed 20260916, exported as PCM WAV; no external samples.'};
- const i=manifest.assets.findIndex(a=>a.path===path);if(i<0)manifest.assets.push(row);else manifest.assets[i]=row;
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {z} from 'zod';
+import {assetSchema,licenseURLs} from '../lib/schema.mjs';
+import {inspectAsset} from '../lib/inspect.mjs';
+export const root=fileURLToPath(new URL('../',import.meta.url));
+export function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
+export async function makeCatalog(){
+ const rows=[],ids=new Set(),files=new Set();
+ for(const file of walk(path.join(root,'metadata')).filter(p=>p.endsWith('.json')).sort()){
+  const a=assetSchema.parse(JSON.parse(fs.readFileSync(file)));if(ids.has(a.id)||files.has(a.file))throw Error(`Duplicate asset ${a.id}`);ids.add(a.id);files.add(a.file);
+  if(path.relative(path.join(root,'metadata'),file)!==a.id+'.json')throw Error(`Metadata filename must match ID: ${a.id}`);
+  const info=await inspectAsset(root,a),t=info.technical,tags=new Set(a.tags);
+  if(t.rigged)tags.add('rigged');if(t.jointCount)tags.add(`${t.jointCount}-joints`);if(t.animations?.length){tags.add('animated');tags.add(`${t.animations.length}-clips`);for(const [re,tag]of [[/walk/i,'walking'],[/jog|run/i,'running'],[/idle/i,'idle'],[/jump/i,'jumping'],[/row/i,'rowing'],[/sail/i,'sailing'],[/skate/i,'skating']])if(t.animations.some(n=>re.test(n)))tags.add(tag);}
+  if(t.alpha)tags.add('transparent');if(a.usage.seamlessVerified)tags.add('seamless');
+  rows.push({...a,tags:[...tags],path:a.file,sourceProject:a.collection,provenance:a.source.description,...info,licenseUrl:licenseURLs[a.license],downloadUrl:`https://jonathanwmaddison.github.io/generated-assets/${a.file}`,pageUrl:`https://jonathanwmaddison.github.io/generated-assets/?asset=${encodeURIComponent(a.id)}`});
+ }
+ for(const file of walk(path.join(root,'assets'))){const p=path.relative(root,file);if(!p.endsWith('.json')&&!files.has(p))throw Error(`Uncatalogued media: ${p}`);}
+ return rows.sort((a,b)=>a.id.localeCompare(b.id));
 }
-manifest.assets.sort((a,b)=>a.path.localeCompare(b.path));
-fs.writeFileSync('manifest.json',JSON.stringify(manifest,null,2)+'\n');
-const media=manifest.assets.filter(a=>a.path.startsWith('assets/'));
-fs.writeFileSync('catalog.json',JSON.stringify(media.map(a=>({...a,name:a.path.split('/').at(-1).replace(/\.[^.]+$/,'').replaceAll('_',' ').replaceAll('-',' '),kind:a.path.endsWith('.glb')?'model':/\.(mp3|wav)$/.test(a.path)?'sound':a.path.includes('/ui/')?'artwork':'texture'})),null,2)+'\n');
-console.log(`${media.length} gallery assets`);
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ const rows=await makeCatalog();fs.writeFileSync(path.join(root,'catalog.json'),JSON.stringify(rows,null,2)+'\n');fs.mkdirSync(path.join(root,'schemas'),{recursive:true});fs.writeFileSync(path.join(root,'schemas/asset.schema.json'),JSON.stringify(z.toJSONSchema(assetSchema),null,2)+'\n');console.log(`Built catalog: ${rows.length} assets`);
+}

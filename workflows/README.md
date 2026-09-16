@@ -1,6 +1,8 @@
 # How the collection was made
 
-The collection combines AI generation with authored Blender meshes and procedural synthesis. “Generated” does not mean every file came from a generative model. The manifest distinguishes these sources.
+The collection combines AI generation with authored Blender meshes and procedural synthesis. “Generated” does not mean every file came from a generative model. The catalog distinguishes these sources.
+
+See these assets in use in [the deployed Fjordfall game](https://fjordfall.fly.dev).
 
 ## Images: recipe → master → export → in-game review
 
@@ -28,6 +30,14 @@ Meshy was used for source meshes, some texture passes and a character auto-rig. 
 
 For newly generated models, establish rights to any supplied reference images separately. Generator output ownership cannot establish rights to a copied character design or an unknown reference sheet.
 
+## Reusing rigs and animation
+
+Both Travellers are included: the owner confirmed rights to their character reference sheets and authorized sharing the resulting models. All four Fjordfall characters include a 24-joint rig and nine clips. Use the complete character GLB for the most direct import.
+
+The `fjordfall/rigs/humanoid-24` asset provides the mesh-free hierarchy and rest pose. Its GLB extras retain the original inverse-bind matrices and joint order. The animation collection provides individual clips and one combined pack targeting that hierarchy. These files contain no skin weights or character mesh; retargeting to another skeleton requires checking names, hierarchy, rest pose and scale in your engine. Root motion and loop seams are not independently certified.
+
+Run `node scripts/export-rig.mjs` after `npm ci` to reproduce these exports from the included rider. Tests compare the original curves, hierarchy and inverse binds. Previews are separate rendered thumbnails; inspect regenerated clips in the gallery before publishing.
+
 ## Procedural scenery from SKYBOUND
 
 [`generators/skybound/props.ts`](../generators/skybound/props.ts) extracts the game's pine, snow-pine, cactus and boulder builders. It preserves their geometry and vertex colors while removing game placement and destruction dependencies. `npm run export:models` writes four standalone GLBs.
@@ -44,6 +54,6 @@ ElevenLabs clips from the game are deliberately absent: a license to include a s
 
 ## Preparing a public pack
 
-Use a file allowlist, not a recursive copy of a game checkout. Record project-relative sources, descriptions, licenses and current-byte SHA-256 hashes in `manifest.json`. Keep unresolved items in `excluded.json`. Never include production saves, private player pictures, credentials or signed service download links.
+Use a file allowlist, not a recursive copy of a game checkout. Record project-relative sources, descriptions, licenses and current-byte SHA-256 hashes in `metadata/` and the generated `catalog.json`. Keep unresolved items in `excluded.json`. Never include production saves, private player pictures, credentials or signed service download links.
 
 Run `npm run catalog` after model/audio exports and `npm run verify` before release. Preview the gallery on desktop and mobile, open a compressed character and a procedural model, play a sound, and verify download links. Record which generator workflows are fully executable here and which are historical documentation requiring the original game sources.

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/tex/sankthans-charcoal",
+  "name": "Sankthans Charcoal",
+  "kind": "texture",
+  "collection": "fjordfall",
+  "category": "Surface materials",
+  "description": "Procedurally authored charcoal-ring decal left after a bonfire. Includes transparent edges for blending into terrain.",
+  "tags": [
+    "texture",
+    "fjordfall",
+    "surface-materials",
+    "sankthans",
+    "charcoal"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Sankthans Charcoal by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/tex/sankthans-charcoal.png",
+  "source": {
+    "method": "authored",
+    "generator": "Blender",
+    "description": "Procedural Blender image; tools/blender/sankthans.py"
+  },
+  "usage": {
+    "notes": [
+      "Inspect seams and color response in your target engine."
+    ],
+    "seamlessVerified": false
+  }
+}

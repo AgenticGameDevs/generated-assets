@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/tex/asphalt",
+  "name": "Asphalt",
+  "kind": "texture",
+  "collection": "fjordfall",
+  "category": "Surface materials",
+  "description": "Flat-lit asphalt albedo detail for road surfaces. Road markings are supplied by the consuming game, not painted into this texture.",
+  "tags": [
+    "texture",
+    "fjordfall",
+    "surface-materials",
+    "asphalt"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Asphalt by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/tex/asphalt.webp",
+  "source": {
+    "method": "ai-generated",
+    "generator": "OpenAI image generation",
+    "description": "OpenAI-generated; recorded model: gpt-image-2.5-sunburst-2026-09-08"
+  },
+  "usage": {
+    "notes": [
+      "Inspect seams and color response in your target engine."
+    ],
+    "seamlessVerified": false
+  }
+}

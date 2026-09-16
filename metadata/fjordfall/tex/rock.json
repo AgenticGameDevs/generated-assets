@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/tex/rock",
+  "name": "Rock",
+  "kind": "texture",
+  "collection": "fjordfall",
+  "category": "Surface materials",
+  "description": "Flat-lit bedrock surface detail for cliffs and rocky terrain. This is a color texture, not a displacement or normal map.",
+  "tags": [
+    "texture",
+    "fjordfall",
+    "surface-materials",
+    "rock"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Rock by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/tex/rock.webp",
+  "source": {
+    "method": "ai-generated",
+    "generator": "OpenAI image generation",
+    "description": "OpenAI-generated; recorded model: gpt-image-2.5-sunburst-2026-09-08"
+  },
+  "usage": {
+    "notes": [
+      "Inspect seams and color response in your target engine."
+    ],
+    "seamlessVerified": false
+  }
+}

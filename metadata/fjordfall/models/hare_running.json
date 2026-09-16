@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/hare_running",
+  "name": "Hare Running",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Wildlife",
+  "description": "Hare Running, a stylized wildlife model from Fjordfall’s Norwegian landscape. Authored in Blender with simple game-scale forms. Game collision and interactive behavior are separate.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "wildlife",
+    "hare",
+    "running",
+    "stylized"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Hare Running by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/models/hare_running.glb",
+  "preview": "thumbnails/fjordfall-hare_running.glb.png",
+  "source": {
+    "method": "authored",
+    "generator": "Blender",
+    "description": "Authored in Blender 5.2 by the recipe, vertex-coloured, flat-shaded, metres, Y-up"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}

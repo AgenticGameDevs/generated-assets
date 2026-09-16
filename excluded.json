@@ -1,16 +1,6 @@
 [
   {
     "sourceProject": "fjordfall",
-    "sourcePath": "public/assets/models/female-rider.glb",
-    "reason": "Reference-image redistribution rights awaiting owner confirmation."
-  },
-  {
-    "sourceProject": "fjordfall",
-    "sourcePath": "public/assets/models/traveller.glb",
-    "reason": "Reference-image redistribution rights awaiting owner confirmation."
-  },
-  {
-    "sourceProject": "fjordfall",
     "sourcePath": "public/assets/tex/dnt-t.png",
     "reason": "DNT-branded trail symbol omitted from the generic pack."
   },

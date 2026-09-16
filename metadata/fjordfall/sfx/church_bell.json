@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/sfx/church_bell",
+  "name": "Church Bell",
+  "kind": "sound",
+  "collection": "fjordfall",
+  "category": "Sound effects",
+  "description": "Original bronze church-bell loop synthesized from inharmonic damped modes and previous-strike tails, without samples.",
+  "tags": [
+    "sound",
+    "fjordfall",
+    "sound-effects",
+    "church",
+    "bell"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Church Bell by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/sfx/church_bell.mp3",
+  "source": {
+    "method": "procedural",
+    "generator": "Additive synthesis",
+    "description": "Original additive synthesis without external samples; tools/gen/church-bell.py"
+  },
+  "usage": {
+    "notes": [
+      "No external samples; synthesized source."
+    ]
+  }
+}

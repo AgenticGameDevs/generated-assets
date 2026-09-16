@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "your-collection/models/wooden-crate",
+  "name": "Wooden crate",
+  "kind": "model",
+  "collection": "your-collection",
+  "category": "Props",
+  "description": "A weathered wooden crate with a simple game-ready silhouette. Replace this example with an accurate description of your file.",
+  "tags": ["crate", "wood", "prop"],
+  "creator": {"name": "Your name", "url": "https://github.com/your-account"},
+  "license": "CC-BY-4.0",
+  "attribution": "Wooden crate by Your name, licensed CC BY 4.0.",
+  "file": "assets/your-collection/models/wooden-crate.glb",
+  "preview": "thumbnails/your-collection-wooden-crate.png",
+  "source": {"method": "authored", "generator": "Blender", "description": "Replace with the actual source workflow and rights basis; do not claim authorship of someone else's work."},
+  "usage": {"units": "metres", "upAxis": "Y", "scaleVerified": false, "notes": ["Replace with actual limitations, or an empty notes array if none are known."]}
+}

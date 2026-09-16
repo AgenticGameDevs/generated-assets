@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const inline=s=>escape(s).replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_,label,url)=>`<a href="${url.replaceAll('"','&quot;').replace(/^\.\.\//,'')}">${label}</a>`).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
-for(const [source,target,title] of [['workflows/README.md','workflows.html','Workflows'],['LICENSE.md','licenses.html','Licenses']]){
+for(const [source,target,title] of [['workflows/README.md','workflows.html','Workflows'],['LICENSE.md','licenses.html','Licenses'],['CONTRIBUTING.md','contribute.html','Contribute'],['GOVERNANCE.md','governance.html','Community'],['AGENTS.md','agents.html','For agents']]){
  const lines=fs.readFileSync(source,'utf8').split('\n');let body='',code=false,list=false;
  for(const line of lines){
   if(line.startsWith('```')){if(list){body+='</ul>';list=false;}code=!code;body+=code?'<pre><code>':'</code></pre>';continue;}

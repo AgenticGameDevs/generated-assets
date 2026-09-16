@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/tex/cabin_paint",
+  "name": "Cabin Paint",
+  "kind": "texture",
+  "collection": "fjordfall",
+  "category": "Surface materials",
+  "description": "Painted timber surface grain for cabins and other wooden buildings, designed for restrained material variation.",
+  "tags": [
+    "texture",
+    "fjordfall",
+    "surface-materials",
+    "cabin",
+    "paint"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Cabin Paint by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/tex/cabin_paint.webp",
+  "source": {
+    "method": "ai-generated",
+    "generator": "OpenAI image generation",
+    "description": "OpenAI-generated; recorded model: gpt-image-2.5-sunburst-2026-09-08"
+  },
+  "usage": {
+    "notes": [
+      "Inspect seams and color response in your target engine."
+    ],
+    "seamlessVerified": false
+  }
+}

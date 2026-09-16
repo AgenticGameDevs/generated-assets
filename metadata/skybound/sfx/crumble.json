@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "skybound/sfx/crumble",
+  "name": "Crumble",
+  "kind": "sound",
+  "collection": "skybound",
+  "category": "Sound effects",
+  "description": "Short filtered-noise crumble effect for breaking scenery and debris.",
+  "tags": [
+    "sound",
+    "skybound",
+    "sound-effects",
+    "crumble"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Crumble by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/skybound/sfx/crumble.wav",
+  "source": {
+    "method": "procedural",
+    "generator": "Godot / Web Audio synthesis",
+    "description": "Original Godot synthesis, fixed seed 20260916, exported as PCM WAV; no external samples."
+  },
+  "usage": {
+    "notes": [
+      "No external samples; synthesized source."
+    ]
+  }
+}

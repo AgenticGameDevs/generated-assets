@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "fjordfall/models/oslo-kit",
+  "name": "Oslo Kit",
+  "kind": "model",
+  "collection": "fjordfall",
+  "category": "Buildings",
+  "description": "An original stylized Blender kit inspired by Oslo’s Opera House, Holmenkollen and four townhouse variants. Contains several landmark meshes in one GLB.",
+  "tags": [
+    "model",
+    "fjordfall",
+    "buildings",
+    "oslo",
+    "kit",
+    "stylized"
+  ],
+  "creator": {
+    "name": "Jonathan Maddison",
+    "url": "https://github.com/jonathanwmaddison"
+  },
+  "license": "CC-BY-4.0",
+  "attribution": "Oslo Kit by Jonathan Maddison, Generated Assets (CC-BY-4.0).",
+  "file": "assets/fjordfall/models/oslo-kit.glb",
+  "preview": "thumbnails/fjordfall-oslo-kit.glb.png",
+  "source": {
+    "method": "authored",
+    "generator": "Blender",
+    "description": "Original Blender models inspired by Oslo architecture; tools/blender/oslo.py"
+  },
+  "usage": {
+    "notes": [
+      "Geometry and materials only; game collision and behavior are not included."
+    ],
+    "units": "metres",
+    "upAxis": "Y",
+    "scaleVerified": false
+  }
+}
